@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montenegrin+Gothic+One:wght@400;700&display=swap');
+@import "tailwindcss";
+
+html, body {
+  background-color: #000000;
+}
+
+@theme {
+  --font-sans: "Montenegrin Gothic One", sans-serif;
+}
+
+@keyframes grid-scroll {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 300px 300px; 
+  }
+}
+
+.bg-moving-grid {
+  background-color: #000000; 
+  
+  background-image: 
+    linear-gradient(45deg, transparent calc(50% - 0.8px), rgba(255, 255, 255, 0.1) calc(50% - 0.8px), rgba(255, 255, 255, 0.1) calc(50% + 0.8px), transparent calc(50% + 0.8px)),
+    linear-gradient(-45deg, transparent calc(50% - 0.8px), rgba(255, 255, 255, 0.1) calc(50% - 0.8px), rgba(255, 255, 255, 0.1) calc(50% + 0.8px), transparent calc(50% + 0.8px));
+    
+  background-size: 300px 300px; 
+    
+  animation: grid-scroll 8s linear infinite; 
+}
