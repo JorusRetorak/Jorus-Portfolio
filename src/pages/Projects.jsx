@@ -61,24 +61,16 @@ const projects = [
 ];
 
 const galleryMedia = [
-  { type: 'image', src: ui1 },
-  { type: 'image', src: ui2 },
-  { type: 'image', src: ui6 },
-  { type: 'image', src: ui3 },
-  { type: 'image', src: ui9 },
-  { type: 'image', src: ui10 },
-  { type: 'image', src: ui4 },
-  { type: 'image', src: ui8 },
-  { type: 'image', src: ui7 },
-  { type: 'image', src: ui11 },
-  { type: 'image', src: ui12 },
-  { type: 'image', src: ui13 },
-  { type: 'image', src: ui14 },
-  { type: 'image', src: ui15 },
-  { type: 'video', src: ui5 },
-  { type: 'video', src: script1 },
-  { type: 'video', src: mineriteVid1 },
-  { type: 'video', src: nextgenVid1 },
+  { type: 'image', src: ui1 }, { type: 'image', src: ui2 }, { type: 'image', src: ui3 },
+  { type: 'image', src: ui4 }, { type: 'video', src: ui5 }, { type: 'image', src: ui6 },
+  { type: 'image', src: ui7 }, { type: 'image', src: ui8 }, { type: 'image', src: ui9 },
+  { type: 'image', src: ui10 }, { type: 'image', src: ui11 }, { type: 'image', src: ui12 },
+  { type: 'image', src: ui13 }, { type: 'image', src: ui14 }, { type: 'image', src: ui15 },
+  { type: 'video', src: script1 }, { type: 'video', src: mineriteVid1 },
+  { type: 'video', src: mineriteVid2 }, { type: 'video', src: mineriteVid3 },
+  { type: 'video', src: mineriteVid4 }, { type: 'video', src: mineriteVid5 },
+  { type: 'video', src: nextgenVid1 }, { type: 'video', src: nextgenVid2 },
+  { type: 'video', src: nextgenVid3 }
 ];
 
 export default function Projects() {
