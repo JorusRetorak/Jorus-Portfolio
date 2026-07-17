@@ -51,7 +51,7 @@ export default function Contact() {
           >
             <img src={xLogo} className="w-16 h-16 object-contain" alt="X" />
             <div className="flex flex-col text-left">
-              <h2 className="text-2xl font-bold">X</h2>
+              <h2 className="text-2xl font-bold">X (FOR CONTACT ONLY)</h2>
               <span className="text-indigo-400 mt-1">@JorusDev</span>
             </div>
           </motion.a>
@@ -101,7 +101,7 @@ export default function Contact() {
       <div className="flex flex-col w-full lg:w-1/3 pt-4 items-center text-center lg:text-right lg:items-end">
         <h2 className="text-3xl md:text-4xl font-bold text-white whitespace-nowrap">PRICES & AVAILABILITY</h2>
         <p className="mt-4 md:mt-6 text-lg text-slate-400 max-w-xs">
-          Responses via form may take up to 72 hours. Responses via Discord may take upto 24 hours. Contact via Discord is preferred. Prices are negotiable.
+          Responses via form may take up to 72 hours. Responses via Discord may take up to 24 hours. Contact via Discord is preferred. Prices are negotiable.
           I don't take percentage. Proof of payment is required.
         </p>
       </div>
