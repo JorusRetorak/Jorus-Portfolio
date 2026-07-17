@@ -102,7 +102,7 @@ export default function Projects() {
           >
             {i % 2 === 0 ? (
               <>
-                <Slideshow media={project.media} className="relative group w-full md:w-1/2 aspect-video bg-slate-800 rounded-xl overflow-hidden border border-slate-700" />
+                <Slideshow media={project.media} className="relative group  bg-slate-800 rounded-x1" />
                 <div className="flex flex-col pt-2 px-0 md:px-4 w-full md:w-1/2 text-center md:text-left items-center md:items-start">
                   <h2 className="text-3xl md:text-4xl font-bold text-white">{project.title}</h2>
                   <p className="mt-4 md:mt-6 text-base md:text-lg text-slate-400">{project.description}</p>
@@ -136,14 +136,14 @@ export default function Projects() {
                     </a>
                   )}
                 </div>
-                <Slideshow media={project.media} className="relative group w-full md:w-1/2 aspect-video bg-slate-800 rounded-xl overflow-hidden border border-slate-700 order-first md:order-last" />
+                <Slideshow media={project.media} className="relative group   bg-slate-800 rounded-xl norder-first md:order-last" />
               </>
             )}
           </motion.div>
         ))}
       </div>
 
-      <div className="mt-40">
+      <div className="mt-20">
         <div className="flex flex-col items-center md:items-start text-center md:text-left mb-12">
           <h2 className="text-4xl font-bold text-white relative group w-fit cursor-default mb-6">
             Gallery/ Concepts
@@ -162,13 +162,13 @@ export default function Projects() {
               whileInView={{ opacity: 1, scale: 1 }}
               whileHover={{ y: -5, scale: 1.02 }}
               transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
-              className="relative aspect-video bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-lg"
+              className="relative aspect-video bg-transparent rounded-xl overflow-hidden"
             >
               {item.type === 'image' ? (
                 <img 
                   src={item.src} 
                   alt={`Gallery item ${index + 1}`} 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               ) : (
                 <video 
@@ -177,7 +177,7 @@ export default function Projects() {
                   loop 
                   muted 
                   playsInline 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                 />
               )}
             </motion.div>

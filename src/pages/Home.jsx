@@ -193,7 +193,7 @@ end
                         </p>
                     </div>
 
-                    <Slideshow media={media} className="w-full md:w-1/2 order-first md:order-last" />
+                    <Slideshow media={media} className="order-first md:order-last" />
                 </motion.div>
 
                 <motion.div
@@ -204,7 +204,7 @@ end
                     transition={{ type: "spring", bounce: 0.4, duration: 1 }}
                     className="flex flex-col md:flex-row gap-8 md:gap-10 w-full xl:w-[70%] mr-auto p-4 md:p-8 items-start bg-transparent rounded-2xl"
                 >
-                    <Slideshow media={media2} className="w-full md:w-1/2" />
+                    <Slideshow media={media2} className="" />
 
                     <div className="flex flex-col pt-2 px-0 md:px-4 flex-1 text-center md:text-left">
                         <h2 className="text-3xl md:text-4xl font-bold text-white md:whitespace-nowrap">Complete Finished Games</h2>
