@@ -3,7 +3,7 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export default function Codeblock({ code, language = "javascript" }) {
   return (
-    <div className="rounded-xl overflow-hidden w-fit h-full border border-slate-700 hover:border-amber-400 shadow-lg">
+    <div className="rounded-xl justify-center overflow-hidden w-fit h-full border border-slate-700 hover:border-amber-400 shadow-lg">
       <SyntaxHighlighter 
         language={language} 
         style={vscDarkPlus}
@@ -12,7 +12,8 @@ export default function Codeblock({ code, language = "javascript" }) {
           // padding: '.5rem', 
           background: '#0f172a', 
           minHeight: '100%',
-          overflowX: 'hidden'
+          overflowX: 'hidden',
+          paddingRight: 35
         }}
       >
         {code}
