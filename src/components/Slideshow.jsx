@@ -1,34 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Slideshow({ media, className = "" }) {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
-  const [ratios, setRatios] = useState({}); 
-
-  const loadedRef = useRef({});
-
-  useEffect(() => {
-    media.forEach((item, i) => {
-      if (loadedRef.current[i]) return;
-      loadedRef.current[i] = true;
-
-      if (item.type === 'image') {
-        const img = new Image();
-        img.onload = () => {
-          setRatios((prev) => ({ ...prev, [i]: img.naturalWidth / img.naturalHeight }));
-        };
-        img.src = item.src;
-      } else {
-        const vid = document.createElement('video');
-        vid.preload = 'metadata';
-        vid.onloadedmetadata = () => {
-          setRatios((prev) => ({ ...prev, [i]: vid.videoWidth / vid.videoHeight }));
-        };
-        vid.src = item.src;
-      }
-    });
-  }, [media]);
 
   const goPrev = (e) => {
     e.stopPropagation();
@@ -42,14 +17,11 @@ export default function Slideshow({ media, className = "" }) {
   };
 
   const current = media[index];
-  const currentRatio = ratios[index]; 
 
   return (
-    <motion.div
-      layout
-      transition={{ type: "tween", duration: 0.2, ease: "easeInOut" }}
+    <div
       className={`relative group inline-block mx-auto md:mx-0 overflow-hidden rounded-xl ${className}`}
-      style={currentRatio ? { aspectRatio: currentRatio, height: 420 } : { opacity: 0 }}
+      style={{ height: 420 }}
     >
       <AnimatePresence mode="popLayout" custom={direction}>
         <motion.div
@@ -59,12 +31,13 @@ export default function Slideshow({ media, className = "" }) {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: direction * -10 }}
           transition={{ duration: 0.15, ease: "easeInOut" }}
-          className="w-full h-full"
+          className="h-full w-full flex items-center justify-center"
         >
           {current.type === 'image' ? (
             <img
               src={current.src}
-              className="block w-full h-full object-contain"
+              alt=""
+              className="block h-full w-auto object-contain"
             />
           ) : (
             <video
@@ -73,7 +46,7 @@ export default function Slideshow({ media, className = "" }) {
               loop
               muted
               playsInline
-              className="block w-full h-full object-contain"
+              className="block h-full w-auto object-contain"
             />
           )}
         </motion.div>
@@ -100,6 +73,6 @@ export default function Slideshow({ media, className = "" }) {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </motion.button>
-    </motion.div>
+    </div>
   );
 }

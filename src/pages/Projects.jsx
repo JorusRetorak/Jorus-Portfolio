@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useMemo } from 'react';
 import Slideshow from '../components/Slideshow'
 import mineriteImg1 from '../assets/mi1.png'
 import mineriteImg2 from '../assets/mi2.png'
@@ -60,20 +61,20 @@ const projects = [
   },
 ];
 
-const galleryMedia = [
-  { type: 'image', src: ui1 }, { type: 'image', src: ui2 }, { type: 'image', src: ui3 },
-  { type: 'image', src: ui4 }, { type: 'video', src: ui5 }, { type: 'image', src: ui6 },
-  { type: 'image', src: ui7 }, { type: 'image', src: ui8 }, { type: 'image', src: ui9 },
-  { type: 'image', src: ui10 }, { type: 'image', src: ui11 }, { type: 'image', src: ui12 },
-  { type: 'image', src: ui13 }, { type: 'image', src: ui14 }, { type: 'image', src: ui15 },
-  { type: 'video', src: script1 }, { type: 'video', src: mineriteVid1 },
-  { type: 'video', src: mineriteVid2 }, { type: 'video', src: mineriteVid3 },
-  { type: 'video', src: mineriteVid4 }, { type: 'video', src: mineriteVid5 },
-  { type: 'video', src: nextgenVid1 }, { type: 'video', src: nextgenVid2 },
-  { type: 'video', src: nextgenVid3 }
-];
-
 export default function Projects() {
+  const galleryMedia = useMemo(() => [
+    { type: 'image', src: ui1 }, { type: 'image', src: ui2 }, { type: 'image', src: ui3 },
+    { type: 'image', src: ui4 }, { type: 'video', src: ui5 }, { type: 'image', src: ui6 },
+    { type: 'image', src: ui7 }, { type: 'image', src: ui8 }, { type: 'image', src: ui9 },
+    { type: 'image', src: ui10 }, { type: 'image', src: ui11 }, { type: 'image', src: ui12 },
+    { type: 'image', src: ui13 }, { type: 'image', src: ui14 }, { type: 'image', src: ui15 },
+    { type: 'video', src: script1 }, { type: 'video', src: mineriteVid1 },
+    { type: 'video', src: mineriteVid2 }, { type: 'video', src: mineriteVid3 },
+    { type: 'video', src: mineriteVid4 }, { type: 'video', src: mineriteVid5 },
+    { type: 'video', src: nextgenVid1 }, { type: 'video', src: nextgenVid2 },
+    { type: 'video', src: nextgenVid3 }
+  ], []);
+
   return (
     <div className="w-full px-6 md:px-24 pb-24">
       <h1 className="text-5xl font-bold mb-12 md:mb-20 text-white relative group w-fit cursor-default mx-auto md:mx-0 text-center md:text-left mt-8 md:mt-0">
@@ -157,18 +158,18 @@ export default function Projects() {
               className="relative aspect-video bg-transparent rounded-xl overflow-hidden"
             >
               {item.type === 'image' ? (
-                <img 
-                  src={item.src} 
-                  alt={`Gallery item ${index + 1}`} 
+                <img
+                  src={item.src}
+                  alt={`Gallery item ${index + 1}`}
                   className="w-full h-full object-contain"
                 />
               ) : (
-                <video 
-                  src={item.src} 
-                  autoPlay 
-                  loop 
-                  muted 
-                  playsInline 
+                <video
+                  src={item.src}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                   className="w-full h-full object-contain"
                 />
               )}

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useMemo } from 'react';
 import Codeblock from '../components/Codeblock';
 import Slideshow from '../components/Slideshow';
 import ui1 from '../assets/ui1.jpeg';
@@ -40,7 +41,7 @@ export default function Home() {
     end
     `;
 
-    const media = [
+    const media = useMemo(() => [
         { type: 'image', src: ui1 },
         { type: 'image', src: ui2 },
         { type: 'image', src: ui6 },
@@ -56,12 +57,12 @@ export default function Home() {
         { type: 'image', src: ui14 },
         { type: 'image', src: ui15 },
         { type: 'video', src: ui5 },
-    ];
+    ], []);
 
-    const media2 = [
+    const media2 = useMemo(() => [
         { type: 'video', src: mineriteVid1 },
         { type: 'video', src: nextgenVid1 },
-    ];
+    ], []);
 
     const backgroundCode = `
 function Client.UpdateBiomeScanner(self: self)
@@ -149,7 +150,7 @@ end
                     <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-white to-white transition-all duration-300 group-hover:w-full rounded-full"></span>
                 </h1>
                 <p className="text-base md:text-lg text-slate-300 max-w-2xl text-center px-4">
-                    I am a Luau programmer and game UI Designer looking to make your projects great! I am determined, collaborative, and communicative! 
+                    I am a Luau programmer and game UI Designer looking to make your projects great! I am determined, collaborative, and communicative!
                     I require clients to be communicative and respectful, so that goals and deadlines can be achieved in an appropriate manner.
                     I have ~6 years of experience as a Roblox developer and have worked on numerous projects.
                     I specialize in data systems and UI programming.
