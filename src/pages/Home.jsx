@@ -146,7 +146,7 @@ end
         <>
             <div className="flex flex-col items-center px-6 md:px-24 mt-16">
                 <h1 className="text-4xl md:text-5xl font-bold mb-6 md:mb-10 text-white relative group w-fit cursor-default text-center">
-                    Programmer, UI Designer.
+                    Programmer, UI Designer, Builder.
                     <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-white to-white transition-all duration-300 group-hover:w-full rounded-full"></span>
                 </h1>
                 <p className="text-base md:text-lg text-slate-300 max-w-2xl text-center px-4">
@@ -154,6 +154,7 @@ end
                     I require clients to be communicative and respectful, so that goals and deadlines can be achieved in an appropriate manner.
                     I have ~6 years of experience as a Roblox developer and have worked on numerous projects.
                     I specialize in data systems and UI programming.
+                    I prefer UI Design & programming jobs.
                 </p>
             </div>
 

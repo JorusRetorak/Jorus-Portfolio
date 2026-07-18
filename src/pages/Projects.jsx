@@ -13,7 +13,13 @@ import mineriteVid5 from '../assets/mineritev4.mp4'
 import nextgenVid1 from '../assets/nextgenvideo1.mp4'
 import nextgenVid2 from '../assets/nextgenvideo2.mp4'
 import nextgenVid3 from '../assets/nextgenvideo3.mp4'
+import lonewolfVid1 from '../assets/v1.mp4'
+import lonewolfVid2 from '../assets/v2.mp4'
+import vid3 from '../assets/v3.mp4'
 
+import dl1 from '../assets/dl1.jpeg';
+import dl2 from '../assets/dl2.jpeg';
+import dl3 from '../assets/dl3.jpeg';
 import ui1 from '../assets/ui1.jpeg';
 import ui2 from '../assets/ui2.png';
 import ui3 from '../assets/ui3.jpeg';
@@ -30,6 +36,20 @@ import ui13 from '../assets/ui13.jpg';
 import ui14 from '../assets/ui14.jpg';
 import ui15 from '../assets/ui15.jpg';
 import script1 from '../assets/script1.mp4';
+
+// Newly added imports
+import buildgal1 from '../assets/buildgal1.jpeg';
+import buildgal2 from '../assets/buildgal2.jpeg';
+import buildgal3 from '../assets/buildgal3.jpeg';
+import buildgal4 from '../assets/buildgal4.jpeg';
+import buildgal5 from '../assets/buildgal5.jpeg';
+import buildgal6 from '../assets/buildgal6.png';
+import buildgal7 from '../assets/buildgal7.png';
+import buildgal8 from '../assets/buildgal8.png';
+import buildgal9 from '../assets/buildgal9.png';
+import buildgal10 from '../assets/buildgal10.png';
+import buildgal11 from '../assets/buildgal11.png';
+import buildgal12 from '../assets/buildgal12.png';
 
 const projects = [
   {
@@ -59,6 +79,16 @@ const projects = [
       { type: 'video', src: nextgenVid3 }
     ]
   },
+    {
+    id: 3,
+    title: "Tony's Mansion - Showcase",
+    description: "Tony's Mansion. Most of the structure built by me. Models/furniture not mine.",
+    media: [
+      { type: 'image', src: dl1 },
+      { type: 'image', src: dl2 },
+      { type: 'image', src: dl3 }
+    ]
+  },
 ];
 
 export default function Projects() {
@@ -72,7 +102,15 @@ export default function Projects() {
     { type: 'video', src: mineriteVid2 }, { type: 'video', src: mineriteVid3 },
     { type: 'video', src: mineriteVid4 }, { type: 'video', src: mineriteVid5 },
     { type: 'video', src: nextgenVid1 }, { type: 'video', src: nextgenVid2 },
-    { type: 'video', src: nextgenVid3 }
+    { type: 'video', src: nextgenVid3 },
+    { type: 'video', src: lonewolfVid1 }, { type: 'video', src: lonewolfVid2 },
+    { type: 'video', src: vid3 },
+    { type: 'image', src: buildgal1 }, { type: 'image', src: buildgal2 },
+    { type: 'image', src: buildgal3 }, { type: 'image', src: buildgal4 },
+    { type: 'image', src: buildgal5 }, { type: 'image', src: buildgal6 },
+    { type: 'image', src: buildgal7 }, { type: 'image', src: buildgal8 },
+    { type: 'image', src: buildgal9 }, { type: 'image', src: buildgal10 },
+    { type: 'image', src: buildgal11 }, { type: 'image', src: buildgal12 }
   ], []);
 
   return (
