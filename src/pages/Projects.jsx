@@ -58,11 +58,11 @@ const projects = [
     description: "A complex, fully finished, voxel-based mining simulator. Caves are generated via perlin noise, multiple cave biomes are scripted as well. Enchants, relics, potions, detailed caves with decorations such as mushrooms, buried structures, and a fully functional UI are featured.",
     link: "https://www.roblox.com/games/139040116168528/Minerite#!/game-instances",
     media: [
-      { type: 'video', src: mineriteVid1 },
+      { type: 'video', src: mineriteVid1, note: "Only did UI Programming" },
       { type: 'video', src: mineriteVid2 },
-      { type: 'video', src: mineriteVid3 },
+      { type: 'video', src: mineriteVid3, note: "Only did UI Programming" },
       { type: 'video', src: mineriteVid4 },
-      { type: 'video', src: mineriteVid5 },
+      { type: 'video', src: mineriteVid5, note: "Only did UI Programming" },
       { type: 'image', src: mineriteImg1 },
       { type: 'image', src: mineriteImg2 },
       { type: 'image', src: mineriteImg3 },
@@ -76,10 +76,10 @@ const projects = [
     media: [
       { type: 'video', src: nextgenVid1 },
       { type: 'video', src: nextgenVid2 },
-      { type: 'video', src: nextgenVid3 }
+      { type: 'video', src: nextgenVid3, note: "Only did UI Programming" }
     ]
   },
-    {
+  {
     id: 3,
     title: "Tony's Mansion - Showcase",
     description: "Tony's Mansion. Most of the structure built by me. Models/furniture not mine.",
@@ -98,11 +98,11 @@ export default function Projects() {
     { type: 'image', src: ui7 }, { type: 'image', src: ui8 }, { type: 'image', src: ui9 },
     { type: 'image', src: ui10 }, { type: 'image', src: ui11 }, { type: 'image', src: ui12 },
     { type: 'image', src: ui13 }, { type: 'image', src: ui14 }, { type: 'image', src: ui15 },
-    { type: 'video', src: script1 }, { type: 'video', src: mineriteVid1 },
-    { type: 'video', src: mineriteVid2 }, { type: 'video', src: mineriteVid3 },
-    { type: 'video', src: mineriteVid4 }, { type: 'video', src: mineriteVid5 },
+    { type: 'video', src: script1 }, { type: 'video', src: mineriteVid1, note: "Only did UI Programming" },
+    { type: 'video', src: mineriteVid2 }, { type: 'video', src: mineriteVid3, note: "Only did UI Programming" },
+    { type: 'video', src: mineriteVid4 }, { type: 'video', src: mineriteVid5, note: "Only did UI Programming" },
     { type: 'video', src: nextgenVid1 }, { type: 'video', src: nextgenVid2 },
-    { type: 'video', src: nextgenVid3 },
+    { type: 'video', src: nextgenVid3, note: "Only did UI Programming" },
     { type: 'video', src: lonewolfVid1 }, { type: 'video', src: lonewolfVid2 },
     { type: 'video', src: vid3 },
     { type: 'image', src: buildgal1 }, { type: 'image', src: buildgal2 },
@@ -193,23 +193,20 @@ export default function Projects() {
               whileInView={{ opacity: 1, scale: 1 }}
               whileHover={{ y: -5, scale: 1.02 }}
               transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
-              className="relative aspect-video bg-transparent rounded-xl overflow-hidden"
+              className="relative aspect-video bg-transparent rounded-xl overflow-hidden group"
             >
               {item.type === 'image' ? (
-                <img
-                  src={item.src}
-                  alt={`Gallery item ${index + 1}`}
-                  className="w-full h-full object-contain"
-                />
+                <img src={item.src} alt="Gallery item" className="w-full h-full object-contain" />
               ) : (
-                <video
-                  src={item.src}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-contain"
-                />
+                <video src={item.src} autoPlay loop muted playsInline className="w-full h-full object-contain" />
+              )}
+
+              {item.note && (
+                <div className="absolute bottom-0 left-0 right-0 p-3 bg-black/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-[10px] md:text-xs text-white text-center italic">
+                    * {item.note}
+                  </p>
+                </div>
               )}
             </motion.div>
           ))}

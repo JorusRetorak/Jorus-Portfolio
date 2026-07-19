@@ -52,6 +52,14 @@ export default function Slideshow({ media, className = "" }) {
         </motion.div>
       </AnimatePresence>
 
+      {current.note && (
+        <div className="absolute bottom-0 left-0 right-0 p-3 bg-black/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none">
+          <p className="text-xs text-white text-center italic">
+            * {current.note}
+          </p>
+        </div>
+      )}
+
       <motion.button
         onClick={goPrev}
         whileHover={{ scale: 1.1 }}
