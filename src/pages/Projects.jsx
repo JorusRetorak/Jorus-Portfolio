@@ -16,6 +16,8 @@ import nextgenVid3 from '../assets/nextgenvideo3.mp4'
 import lonewolfVid1 from '../assets/v1.mp4'
 import lonewolfVid2 from '../assets/v2.mp4'
 import vid3 from '../assets/v3.mp4'
+import vid4 from '../assets/mv1.mp4'
+import mineriteVid6 from '../assets/mv2.mp4'
 
 import dl1 from '../assets/dl1.jpeg';
 import dl2 from '../assets/dl2.jpeg';
@@ -37,7 +39,6 @@ import ui14 from '../assets/ui14.jpg';
 import ui15 from '../assets/ui15.jpg';
 import script1 from '../assets/script1.mp4';
 
-// Newly added imports
 import buildgal1 from '../assets/buildgal1.jpeg';
 import buildgal2 from '../assets/buildgal2.jpeg';
 import buildgal3 from '../assets/buildgal3.jpeg';
@@ -93,14 +94,15 @@ const projects = [
 
 export default function Projects() {
   const galleryMedia = useMemo(() => [
+    { type: 'video', src: mineriteVid1, note: "Only did UI Programming" },
+    { type: 'video', src: mineriteVid2 }, { type: 'video', src: mineriteVid3, note: "Only did UI Programming" },
+    { type: 'video', src: mineriteVid4 }, { type: 'video', src: mineriteVid5, note: "Only did UI Programming" },{ type: 'video', src: mineriteVid6 },
     { type: 'image', src: ui1 }, { type: 'image', src: ui2 }, { type: 'image', src: ui3 },
     { type: 'image', src: ui4 }, { type: 'video', src: ui5 }, { type: 'image', src: ui6 },
-    { type: 'image', src: ui7 }, { type: 'image', src: ui8 }, { type: 'image', src: ui9 },
+    { type: 'image', src: ui7 }, { type: 'image', src: ui8 }, { type: 'image', src: ui9 },{ type: 'video', src: vid4 },
     { type: 'image', src: ui10 }, { type: 'image', src: ui11 }, { type: 'image', src: ui12 },
     { type: 'image', src: ui13 }, { type: 'image', src: ui14 }, { type: 'image', src: ui15 },
-    { type: 'video', src: script1 }, { type: 'video', src: mineriteVid1, note: "Only did UI Programming" },
-    { type: 'video', src: mineriteVid2 }, { type: 'video', src: mineriteVid3, note: "Only did UI Programming" },
-    { type: 'video', src: mineriteVid4 }, { type: 'video', src: mineriteVid5, note: "Only did UI Programming" },
+    { type: 'video', src: script1 },
     { type: 'video', src: nextgenVid1 }, { type: 'video', src: nextgenVid2 },
     { type: 'video', src: nextgenVid3, note: "Only did UI Programming" },
     { type: 'video', src: lonewolfVid1 }, { type: 'video', src: lonewolfVid2 },

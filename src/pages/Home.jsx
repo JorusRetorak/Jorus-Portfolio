@@ -175,7 +175,7 @@ end
                     <div className="flex flex-col pt-2 px-0 md:px-4 flex-1 text-center md:text-left">
                         <h2 className="text-3xl md:text-4xl font-bold text-white whitespace-nowrap">Advanced Luau</h2>
                         <p className="mt-4 md:mt-6 text-base md:text-lg text-slate-400">
-                            I write clean, highly optimized, and modular Luau code for the Roblox engine. From complex math and data systems to secure server-client communication, I build robust systems designed to scale with your player base. I don't specialize in physics systems, but I can program simple to moderate physics systems.
+                            I write clean, highly optimized, and modular Luau code for the Roblox engine. From complex math and data systems to secure server-client communication, I build robust systems designed to scale with your player base. Experienced with frameworks like Knit. I don't specialize in physics systems, but I can program simple to moderate physics systems.
                         </p>
                     </div>
                 </motion.div>
