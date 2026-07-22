@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import LazyVideo from './LazyVideo';
 import LazyImage from './LazyImage';
+
 export default function Slideshow({ media, className = "" }) {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
