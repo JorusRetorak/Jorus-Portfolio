@@ -23,6 +23,7 @@ import nextgenVid1 from '../assets/nextgenvideo1.mp4';
 import new2 from '../assets/new2.png';
 import new4 from '../assets/new4.png';
 import new7 from '../assets/new7.png';
+import new8 from '../assets/new8.png';
 
 export default function Home() {
 
@@ -59,6 +60,7 @@ export default function Home() {
         { type: 'image', src: ui12 },
         { type: 'image', src: ui13 },
         { type: 'image', src: ui14 },
+        { type: 'image', src: new8 },
         { type: 'image', src: ui15 },
         { type: 'video', src: ui5 },
         { type: 'image', src: new4 },

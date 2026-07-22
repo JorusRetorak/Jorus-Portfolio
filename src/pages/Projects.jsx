@@ -59,6 +59,7 @@ import new4 from '../assets/new4.png';
 import new5 from '../assets/new5.mp4';
 import new6 from '../assets/new6.mp4';
 import new7 from '../assets/new7.png';
+import new8 from '../assets/new8.png';
 
 const projects = [
   {
@@ -106,7 +107,7 @@ export default function Projects() {
     { type: 'video', src: mineriteVid1, note: "Only did UI Programming" },
     { type: 'video', src: mineriteVid2 }, { type: 'video', src: mineriteVid3, note: "Only did UI Programming" },
     { type: 'video', src: mineriteVid4 }, { type: 'video', src: mineriteVid5, note: "Only did UI Programming" },{ type: 'video', src: mineriteVid6 },
-    { type: 'image', src: ui1 }, { type: 'image', src: ui2 }, { type: 'image', src: ui3 },
+    { type: 'image', src: ui1 }, { type: 'image', src: ui2 }, { type: 'image', src: new8 }, { type: 'image', src: ui3 },
     { type: 'image', src: ui4 }, { type: 'video', src: ui5 }, { type: 'image', src: ui6 },
     { type: 'image', src: ui7 }, { type: 'image', src: ui8 }, { type: 'image', src: ui9 },{ type: 'video', src: vid4 },
     { type: 'image', src: ui10 }, { type: 'image', src: ui11 }, { type: 'image', src: ui12 },
