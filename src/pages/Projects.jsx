@@ -1,23 +1,25 @@
 import { motion } from 'framer-motion';
 import { useMemo } from 'react';
-import Slideshow from '../components/Slideshow'
-import mineriteImg1 from '../assets/mi1.png'
-import mineriteImg2 from '../assets/mi2.png'
-import mineriteImg3 from '../assets/mi3.png'
+import Slideshow from '../components/Slideshow';
+import LazyImage from '../components/LazyImage';
+import LazyVideo from '../components/LazyVideo';
+import mineriteImg1 from '../assets/mi1.png';
+import mineriteImg2 from '../assets/mi2.png';
+import mineriteImg3 from '../assets/mi3.png';
 
-import mineriteVid1 from '../assets/mineritevideo1.mp4'
-import mineriteVid2 from '../assets/mineritev1.mp4'
-import mineriteVid3 from '../assets/mineritev2.mp4'
-import mineriteVid4 from '../assets/mineritev3.mp4'
-import mineriteVid5 from '../assets/mineritev4.mp4'
-import nextgenVid1 from '../assets/nextgenvideo1.mp4'
-import nextgenVid2 from '../assets/nextgenvideo2.mp4'
-import nextgenVid3 from '../assets/nextgenvideo3.mp4'
-import lonewolfVid1 from '../assets/v1.mp4'
-import lonewolfVid2 from '../assets/v2.mp4'
-import vid3 from '../assets/v3.mp4'
-import vid4 from '../assets/mv1.mp4'
-import mineriteVid6 from '../assets/mv2.mp4'
+import mineriteVid1 from '../assets/mineritevideo1.mp4';
+import mineriteVid2 from '../assets/mineritev1.mp4';
+import mineriteVid3 from '../assets/mineritev2.mp4';
+import mineriteVid4 from '../assets/mineritev3.mp4';
+import mineriteVid5 from '../assets/mineritev4.mp4';
+import nextgenVid1 from '../assets/nextgenvideo1.mp4';
+import nextgenVid2 from '../assets/nextgenvideo2.mp4';
+import nextgenVid3 from '../assets/nextgenvideo3.mp4';
+import lonewolfVid1 from '../assets/v1.mp4';
+import lonewolfVid2 from '../assets/v2.mp4';
+import vid3 from '../assets/v3.mp4';
+import vid4 from '../assets/mv1.mp4';
+import mineriteVid6 from '../assets/mv2.mp4';
 
 import dl1 from '../assets/dl1.jpeg';
 import dl2 from '../assets/dl2.jpeg';
@@ -156,7 +158,7 @@ export default function Projects() {
           >
             {i % 2 === 0 ? (
               <>
-                <Slideshow media={project.media} className="relative group  bg-slate-800 rounded-x1" />
+                <Slideshow media={project.media} className="relative group bg-slate-800 rounded-xl" />
                 <div className="flex flex-col pt-2 px-0 md:px-4 w-full md:w-1/2 text-center md:text-left items-center md:items-start">
                   <h2 className="text-3xl md:text-4xl font-bold text-white">{project.title}</h2>
                   <p className="mt-4 md:mt-6 text-base md:text-lg text-slate-400">{project.description}</p>
@@ -190,7 +192,7 @@ export default function Projects() {
                     </a>
                   )}
                 </div>
-                <Slideshow media={project.media} className="relative group   bg-slate-800 rounded-xl norder-first md:order-last" />
+                <Slideshow media={project.media} className="relative group bg-slate-800 rounded-xl order-first md:order-last" />
               </>
             )}
           </motion.div>
@@ -220,9 +222,9 @@ export default function Projects() {
               className="relative aspect-video bg-transparent rounded-xl overflow-hidden group"
             >
               {item.type === 'image' ? (
-                <img src={item.src} alt="Gallery item" className="w-full h-full object-contain" />
+                <LazyImage src={item.src} alt="Gallery item" className="w-full h-full object-contain" />
               ) : (
-                <video src={item.src} autoPlay loop muted playsInline className="w-full h-full object-contain" />
+                <LazyVideo src={item.src} className="w-full h-full object-contain" />
               )}
 
               {item.note && (

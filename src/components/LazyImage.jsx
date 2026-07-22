@@ -12,6 +12,7 @@ export default function LazyImage({ src, alt = '', className = '' }) {
         key={src}
         src={src}
         alt={alt}
+        loading="lazy"
         decoding="async"
         ref={(node) => {
           if (node && node.complete) setLoaded(true);

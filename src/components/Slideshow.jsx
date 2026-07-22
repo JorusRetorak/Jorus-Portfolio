@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import LazyVideo from './LazyVideo';
 import LazyImage from './LazyImage';
@@ -6,6 +6,18 @@ import LazyImage from './LazyImage';
 export default function Slideshow({ media, className = "" }) {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
+
+  useEffect(() => {
+    const nextIndex = (index + 1) % media.length;
+    const prevIndex = (index - 1 + media.length) % media.length;
+
+    [media[nextIndex], media[prevIndex]].forEach(item => {
+      if (item.type === 'image') {
+        const img = new Image();
+        img.src = item.src;
+      }
+    });
+  }, [index, media]);
 
   const goPrev = (e) => {
     e.stopPropagation();
@@ -44,10 +56,6 @@ export default function Slideshow({ media, className = "" }) {
           ) : (
             <LazyVideo 
               src={current.src}
-              autoPlay
-              loop
-              muted
-              playsInline
               className="block h-full w-auto object-contain"
             />
           )}
