@@ -52,6 +52,14 @@ import buildgal10 from '../assets/buildgal10.png';
 import buildgal11 from '../assets/buildgal11.png';
 import buildgal12 from '../assets/buildgal12.png';
 
+import new1 from '../assets/new1.png';
+import new2 from '../assets/new2.png';
+import new3 from '../assets/new3.png';
+import new4 from '../assets/new4.png';
+import new5 from '../assets/new5.mp4';
+import new6 from '../assets/new6.mp4';
+import new7 from '../assets/new7.png';
+
 const projects = [
   {
     id: 1,
@@ -87,7 +95,8 @@ const projects = [
     media: [
       { type: 'image', src: dl1 },
       { type: 'image', src: dl2 },
-      { type: 'image', src: dl3 }
+      { type: 'image', src: dl3 },
+      { type: 'image', src: new4 }
     ]
   },
 ];
@@ -102,6 +111,7 @@ export default function Projects() {
     { type: 'image', src: ui7 }, { type: 'image', src: ui8 }, { type: 'image', src: ui9 },{ type: 'video', src: vid4 },
     { type: 'image', src: ui10 }, { type: 'image', src: ui11 }, { type: 'image', src: ui12 },
     { type: 'image', src: ui13 }, { type: 'image', src: ui14 }, { type: 'image', src: ui15 },
+    { type: 'video', src: new5 }, { type: 'video', src: new6 },
     { type: 'video', src: script1 },
     { type: 'video', src: nextgenVid1 }, { type: 'video', src: nextgenVid2 },
     { type: 'video', src: nextgenVid3, note: "Only did UI Programming" },
@@ -112,7 +122,10 @@ export default function Projects() {
     { type: 'image', src: buildgal5 }, { type: 'image', src: buildgal6 },
     { type: 'image', src: buildgal7 }, { type: 'image', src: buildgal8 },
     { type: 'image', src: buildgal9 }, { type: 'image', src: buildgal10 },
-    { type: 'image', src: buildgal11 }, { type: 'image', src: buildgal12 }
+    { type: 'image', src: buildgal11 }, { type: 'image', src: buildgal12 },
+    { type: 'image', src: new1 }, { type: 'image', src: new2 },
+    { type: 'image', src: new3 }, { type: 'image', src: new4 },
+    { type: 'image', src: new7 }
   ], []);
 
   return (

@@ -20,6 +20,10 @@ import ui15 from '../assets/ui15.jpg';
 import mineriteVid1 from '../assets/mineritevideo1.mp4';
 import nextgenVid1 from '../assets/nextgenvideo1.mp4';
 
+import new2 from '../assets/new2.png';
+import new4 from '../assets/new4.png';
+import new7 from '../assets/new7.png';
+
 export default function Home() {
 
     const code = `
@@ -57,6 +61,9 @@ export default function Home() {
         { type: 'image', src: ui14 },
         { type: 'image', src: ui15 },
         { type: 'video', src: ui5 },
+        { type: 'image', src: new4 },
+        { type: 'image', src: new7 },
+        { type: 'image', src: new2 },
     ], []);
 
     const media2 = useMemo(() => [
