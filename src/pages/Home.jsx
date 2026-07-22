@@ -1,5 +1,9 @@
 import { motion } from 'framer-motion';
 import { useMemo } from 'react';
+import Spotlight from '../components/Spotlight';
+import TechMarquee from '../components/TechMarquee';
+import StatsBar from '../components/StatsBar';
+import AvailabilityBadge from '../components/AvailabilityBadge';
 import Codeblock from '../components/Codeblock';
 import Slideshow from '../components/Slideshow';
 import ui1 from '../assets/ui1.jpeg';
@@ -152,9 +156,15 @@ end
 `.repeat(5);
 
     return (
-        <>
-            <div className="flex flex-col items-center px-6 md:px-24 mt-16">
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 md:mb-10 text-white relative group w-fit cursor-default text-center">
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+        >
+            <Spotlight className="flex flex-col items-center px-6 md:px-24">
+                <AvailabilityBadge />
+                <h1 className="text-4xl md:text-5xl font-bold mt-6 mb-6 md:mb-10 text-white relative group w-fit cursor-default text-center">
                     Programmer, UI Designer, Builder.
                     <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-white to-white transition-all duration-300 group-hover:w-full rounded-full"></span>
                 </h1>
@@ -165,7 +175,10 @@ end
                     I specialize in data systems and UI programming.
                     I prefer UI Design & programming jobs.
                 </p>
-            </div>
+                <StatsBar />
+            </Spotlight>
+
+            <TechMarquee />
 
             <div className="flex flex-col gap-24 md:gap-32 px-6 md:px-24 py-16 md:py-24">
 
@@ -262,6 +275,6 @@ end
                     </a>
                 </motion.div>
             </div>
-        </>
+        </motion.div>
     );
 }

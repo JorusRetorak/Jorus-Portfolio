@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import LazyVideo from './LazyVideo';
+import LazyImage from './LazyImage';
 export default function Slideshow({ media, className = "" }) {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
@@ -34,13 +35,13 @@ export default function Slideshow({ media, className = "" }) {
           className="h-full w-full flex items-center justify-center"
         >
           {current.type === 'image' ? (
-            <img
+            <LazyImage
               src={current.src}
               alt=""
               className="block h-full w-auto object-contain"
             />
           ) : (
-            <video
+            <LazyVideo 
               src={current.src}
               autoPlay
               loop

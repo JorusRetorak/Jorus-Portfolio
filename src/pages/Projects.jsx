@@ -106,10 +106,10 @@ export default function Projects() {
   const galleryMedia = useMemo(() => [
     { type: 'video', src: mineriteVid1, note: "Only did UI Programming" },
     { type: 'video', src: mineriteVid2 }, { type: 'video', src: mineriteVid3, note: "Only did UI Programming" },
-    { type: 'video', src: mineriteVid4 }, { type: 'video', src: mineriteVid5, note: "Only did UI Programming" },{ type: 'video', src: mineriteVid6 },
+    { type: 'video', src: mineriteVid4 }, { type: 'video', src: mineriteVid5, note: "Only did UI Programming" }, { type: 'video', src: mineriteVid6 },
     { type: 'image', src: ui1 }, { type: 'image', src: ui2 }, { type: 'image', src: new8 }, { type: 'image', src: ui3 },
     { type: 'image', src: ui4 }, { type: 'video', src: ui5 }, { type: 'image', src: ui6 },
-    { type: 'image', src: ui7 }, { type: 'image', src: ui8 }, { type: 'image', src: ui9 },{ type: 'video', src: vid4 },
+    { type: 'image', src: ui7 }, { type: 'image', src: ui8 }, { type: 'image', src: ui9 }, { type: 'video', src: vid4 },
     { type: 'image', src: ui10 }, { type: 'image', src: ui11 }, { type: 'image', src: ui12 },
     { type: 'image', src: ui13 }, { type: 'image', src: ui14 }, { type: 'image', src: ui15 },
     { type: 'video', src: new5 }, { type: 'video', src: new6 },
@@ -130,7 +130,13 @@ export default function Projects() {
   ], []);
 
   return (
-    <div className="w-full px-6 md:px-24 pb-24">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.25 }}
+      className="w-full px-6 md:px-24 pb-24"
+    >
       <h1 className="text-5xl font-bold mb-12 md:mb-20 text-white relative group w-fit cursor-default mx-auto md:mx-0 text-center md:text-left mt-8 md:mt-0">
         Featured Work
         <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-white to-white transition-all duration-300 group-hover:w-full rounded-full"></span>
@@ -143,6 +149,7 @@ export default function Projects() {
             initial={{ opacity: 0, y: 100 }}
             whileHover={{ y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ type: "spring", bounce: 0.4, duration: 1 }}
             className={`flex flex-col md:flex-row gap-8 md:gap-10 w-full xl:w-[85%] md:p-8 ${i % 2 === 0 ? 'mr-auto justify-start' : 'ml-auto justify-end'
               } items-start`}
@@ -207,6 +214,7 @@ export default function Projects() {
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: "-50px" }}
               whileHover={{ y: -5, scale: 1.02 }}
               transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
               className="relative aspect-video bg-transparent rounded-xl overflow-hidden group"
@@ -228,7 +236,6 @@ export default function Projects() {
           ))}
         </div>
       </div>
-
-    </div>
+    </motion.div>
   );
 }

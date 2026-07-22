@@ -33,8 +33,14 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row justify-between w-full px-6 md:px-24 mt-10 md:mt-16 gap-16 md:gap-12">
-      
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.25 }}
+      className="flex flex-col lg:flex-row justify-between w-full px-6 md:px-24 mt-10 md:mt-16 gap-16 md:gap-12"
+    >
+
       <div className="flex flex-col w-full lg:w-1/3 items-center lg:items-start text-center lg:text-left">
         <h1 className="text-5xl font-bold mb-10 md:mb-12 text-white relative group w-fit cursor-default">
           Contact me
@@ -55,7 +61,7 @@ export default function Contact() {
               <span className="text-indigo-400 mt-1">_jorusretorak</span>
             </div>
           </motion.a>
-          
+
           <motion.a
             href="https://devforum.roblox.com/u/jorusretorak/summary"
             target="_blank"
@@ -69,7 +75,7 @@ export default function Contact() {
               <span className="text-indigo-400 mt-1">JorusRetorak</span>
             </div>
           </motion.a>
-          
+
           <motion.a
             href="https://x.com/JorusDev"
             target="_blank"
@@ -88,37 +94,37 @@ export default function Contact() {
 
       <div className="flex flex-col w-full lg:w-1/3 z-10">
         <form onSubmit={handleSubmit} className="flex flex-col gap-5 w-full max-w-md mx-auto">
-          
+
           <input type="hidden" name="access_key" value="0c7cc4cb-011b-4f1e-a6ff-0e6aced6086d" />
-          
+
           <h2 className="text-3xl font-bold text-white mb-2 text-center lg:text-left">Send a Message</h2>
-          
-          <input 
-            type="text" 
-            name="name" 
-            placeholder="Your Name" 
-            required 
-            className="w-full bg-slate-900/40 border border-slate-700 rounded-xl p-4 text-white focus:outline-none focus:border-indigo-500 transition-colors" 
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            className="w-full bg-slate-900/40 border border-slate-700 rounded-xl p-4 text-white focus:outline-none focus:border-indigo-500 transition-colors"
           />
-          
-          <input 
-            type="email" 
-            name="email" 
-            placeholder="Your Email" 
-            required 
-            className="w-full bg-slate-900/40 border border-slate-700 rounded-xl p-4 text-white focus:outline-none focus:border-indigo-500 transition-colors" 
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            className="w-full bg-slate-900/40 border border-slate-700 rounded-xl p-4 text-white focus:outline-none focus:border-indigo-500 transition-colors"
           />
-          
-          <textarea 
-            name="message" 
-            placeholder="What's your message?" 
-            rows={5} 
-            required 
+
+          <textarea
+            name="message"
+            placeholder="What's your message?"
+            rows={5}
+            required
             className="w-full bg-slate-900/40 border border-slate-700 rounded-xl p-4 text-white focus:outline-none focus:border-indigo-500 transition-colors resize-none"
           ></textarea>
-          
-          <button 
-            type="submit" 
+
+          <button
+            type="submit"
             disabled={status === 'sending'}
             className="w-full bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold rounded-xl p-4 transition-colors cursor-pointer"
           >
@@ -141,7 +147,6 @@ export default function Contact() {
           I don't take percentage. Proof of payment is required.
         </p>
       </div>
-      
-    </div>
+    </motion.div>
   );
 }

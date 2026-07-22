@@ -7,6 +7,12 @@ html, body {
 
 @theme {
   --font-sans: "Inconsolata", sans-serif;
+  --animate-marquee: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(var(--marquee-shift, -50%)); }
 }
 
 @keyframes grid-scroll {
