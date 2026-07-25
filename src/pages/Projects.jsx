@@ -19,6 +19,7 @@ import lonewolfVid1 from '../assets/v1.mp4';
 import lonewolfVid2 from '../assets/v2.mp4';
 import vid3 from '../assets/v3.mp4';
 import vid4 from '../assets/mv1.mp4';
+import vid5 from '../assets/plane1.mp4';
 import mineriteVid6 from '../assets/mv2.mp4';
 
 import dl1 from '../assets/dl1.jpeg';
@@ -109,17 +110,18 @@ export default function Projects() {
     { type: 'video', src: mineriteVid1, note: "Only did UI Programming" },
     { type: 'video', src: mineriteVid2 }, { type: 'video', src: mineriteVid3, note: "Only did UI Programming" },
     { type: 'video', src: mineriteVid4 }, { type: 'video', src: mineriteVid5, note: "Only did UI Programming" }, { type: 'video', src: mineriteVid6 },
+    { type: 'video', src: vid5, note: "Custom flight system" },
     { type: 'image', src: ui1 }, { type: 'image', src: ui2 }, { type: 'image', src: new8 }, { type: 'image', src: ui3 },
     { type: 'image', src: ui4 }, { type: 'video', src: ui5 }, { type: 'image', src: ui6 },
     { type: 'image', src: ui7 }, { type: 'image', src: ui8 }, { type: 'image', src: ui9 }, { type: 'video', src: vid4 },
-    { type: 'image', src: ui10 }, { type: 'image', src: ui11 }, { type: 'image', src: ui12 },
-    { type: 'image', src: ui13 }, { type: 'image', src: ui14 }, { type: 'image', src: ui15 },
     { type: 'video', src: new5 }, { type: 'video', src: new6 },
     { type: 'video', src: script1 },
     { type: 'video', src: nextgenVid1 }, { type: 'video', src: nextgenVid2 },
     { type: 'video', src: nextgenVid3, note: "Only did UI Programming" },
     { type: 'video', src: lonewolfVid1 }, { type: 'video', src: lonewolfVid2 },
     { type: 'video', src: vid3 },
+    { type: 'image', src: ui10 }, { type: 'image', src: ui11 }, { type: 'image', src: ui12 },
+    { type: 'image', src: ui13 }, { type: 'image', src: ui14 }, { type: 'image', src: ui15 },
     { type: 'image', src: buildgal1 }, { type: 'image', src: buildgal2 },
     { type: 'image', src: buildgal3 }, { type: 'image', src: buildgal4 },
     { type: 'image', src: buildgal5 }, { type: 'image', src: buildgal6 },
