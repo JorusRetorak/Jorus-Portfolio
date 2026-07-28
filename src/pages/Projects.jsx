@@ -40,7 +40,7 @@ import ui12 from '../assets/ui12.jpg';
 import ui13 from '../assets/ui13.jpg';
 import ui14 from '../assets/ui14.jpg';
 import ui15 from '../assets/ui15.jpg';
-import ui16 from '../assets/uinew1.jpg';
+import ui16 from '../assets/uinew1.png';
 import script1 from '../assets/script1.mp4';
 
 import buildgal1 from '../assets/buildgal1.jpeg';

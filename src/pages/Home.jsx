@@ -21,7 +21,7 @@ import ui12 from '../assets/ui12.jpg';
 import ui13 from '../assets/ui13.jpg';
 import ui14 from '../assets/ui14.jpg';
 import ui15 from '../assets/ui15.jpg';
-import ui16 from '../assets/uinew1.jpg';
+import ui16 from '../assets/uinew1.png';
 import mineriteVid1 from '../assets/mineritevideo1.mp4';
 import nextgenVid1 from '../assets/nextgenvideo1.mp4';
 
