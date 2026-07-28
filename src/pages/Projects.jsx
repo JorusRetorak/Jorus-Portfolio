@@ -40,6 +40,7 @@ import ui12 from '../assets/ui12.jpg';
 import ui13 from '../assets/ui13.jpg';
 import ui14 from '../assets/ui14.jpg';
 import ui15 from '../assets/ui15.jpg';
+import ui16 from '../assets/uinew1.jpg';
 import script1 from '../assets/script1.mp4';
 
 import buildgal1 from '../assets/buildgal1.jpeg';
@@ -120,7 +121,7 @@ export default function Projects() {
     { type: 'video', src: nextgenVid3, note: "Only did UI Programming" },
     { type: 'video', src: lonewolfVid1 }, { type: 'video', src: lonewolfVid2 },
     { type: 'video', src: vid3 },
-    { type: 'image', src: ui10 }, { type: 'image', src: ui11 }, { type: 'image', src: ui12 },
+    { type: 'image', src: ui10 }, { type: 'image', src: ui11 }, { type: 'image', src: ui12 },{ type: 'image', src: ui16 },
     { type: 'image', src: ui13 }, { type: 'image', src: ui14 }, { type: 'image', src: ui15 },
     { type: 'image', src: buildgal1 }, { type: 'image', src: buildgal2 },
     { type: 'image', src: buildgal3 }, { type: 'image', src: buildgal4 },
