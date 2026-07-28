@@ -9,7 +9,7 @@ import Slideshow from '../components/Slideshow';
 import SkillsGrid from '../components/SkillsGrid';
 import FeaturedProjects from '../components/FeaturedProjects';
 import UISection from '../components/UISection';
-import cavePhoto from '../assets/cavePhoto.png';
+import CaveBackground from '../components/CaveBackground'
 import ui1 from '../assets/ui1.jpeg';
 import ui2 from '../assets/ui2.png';
 import ui3 from '../assets/ui3.jpeg';
@@ -234,26 +234,7 @@ end
                 </div>
 
                 <div className="relative w-full lg:w-1/2 flex items-center justify-center pointer-events-none min-h-[400px] lg:min-h-0">
-                    <motion.div
-                        animate={{ y: [-8, 8, -8] }}
-                        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] lg:w-[85vw] h-[80vh] lg:h-[130vh] flex items-center justify-center -z-10"
-                        style={{
-                            WebkitMaskImage: 'radial-gradient(ellipse closest-side, black 30%, transparent 90%)',
-                            maskImage: 'radial-gradient(ellipse closest-side, black 30%, transparent 90%)'
-                        }}
-                    >
-                        <div className="absolute w-[60%] h-[60%] rounded-full bg-amber-500/10 blur-[150px]" />
-
-                        <div className="absolute w-[20rem] h-[20rem] md:w-[45rem] md:h-[45rem] rounded-full border-[2px] border-amber-400/20 blur-[2px]" />
-                        <div className="absolute w-[20rem] h-[20rem] md:w-[45rem] md:h-[45rem] rounded-full border border-amber-300/10" />
-
-                        <img
-                            src={cavePhoto}
-                            alt="Minerite Cave Showcase"
-                            className="relative z-10 w-full h-full object-cover object-[70%_center] scale-[1] opacity-85"
-                        />
-                    </motion.div>
+                    <CaveBackground />
                 </div>
             </Spotlight>
 
