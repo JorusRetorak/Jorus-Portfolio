@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import CaveBackground from '../components/CaveBackground'
+import NextgenBackground from '../components/NextgenBackground'
 
 const icons = {
   controller: (
@@ -69,7 +69,7 @@ export default function ProjectsHero() {
       </div>
 
       <div className="relative w-full lg:w-1/2 flex items-center justify-center pointer-events-none min-h-[400px] lg:min-h-0">
-        <CaveBackground />
+        <NextgenBackground />
       </div>
 
     </section>
