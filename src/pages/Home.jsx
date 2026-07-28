@@ -22,6 +22,7 @@ import ui13 from '../assets/ui13.jpg';
 import ui14 from '../assets/ui14.jpg';
 import ui15 from '../assets/ui15.jpg';
 import ui16 from '../assets/uinew1.png';
+import ui17 from '../assets/uinew2.png';
 import mineriteVid1 from '../assets/mineritevideo1.mp4';
 import nextgenVid1 from '../assets/nextgenvideo1.mp4';
 
@@ -59,6 +60,7 @@ export default function Home() {
         { type: 'image', src: ui9 },
         { type: 'image', src: ui10 },
         { type: 'image', src: ui4 },
+        { type: 'image', src: ui17 },
         { type: 'image', src: ui8 },
         { type: 'image', src: ui7 },
         { type: 'image', src: ui11 },

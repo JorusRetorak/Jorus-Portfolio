@@ -42,7 +42,7 @@ import ui14 from '../assets/ui14.jpg';
 import ui15 from '../assets/ui15.jpg';
 import ui16 from '../assets/uinew1.png';
 import script1 from '../assets/script1.mp4';
-
+import ui17 from '../assets/uinew2.png';
 import buildgal1 from '../assets/buildgal1.jpeg';
 import buildgal2 from '../assets/buildgal2.jpeg';
 import buildgal3 from '../assets/buildgal3.jpeg';
@@ -111,7 +111,7 @@ export default function Projects() {
     { type: 'video', src: mineriteVid1, note: "Only did UI Programming" },
     { type: 'video', src: mineriteVid2 }, { type: 'video', src: mineriteVid3, note: "Only did UI Programming" },
     { type: 'video', src: mineriteVid4 }, { type: 'video', src: mineriteVid5, note: "Only did UI Programming" }, { type: 'video', src: mineriteVid6 },
-    { type: 'video', src: vid5, note: "Custom flight system" },
+    { type: 'video', src: vid5, note: "Custom flight system" }, { type: 'image', src: ui17 },
     { type: 'image', src: ui1 }, { type: 'image', src: ui2 }, { type: 'image', src: new8 }, { type: 'image', src: ui3 },
     { type: 'image', src: ui4 }, { type: 'video', src: ui5 }, { type: 'image', src: ui6 },
     { type: 'image', src: ui7 }, { type: 'image', src: ui8 }, { type: 'image', src: ui9 }, { type: 'video', src: vid4 },
