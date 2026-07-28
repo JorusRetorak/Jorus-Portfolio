@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import LazyImage from './LazyImage';
 import LazyVideo from './LazyVideo';
 
-const CATEGORIES = ['All', 'Gameplay', 'UI/UX', 'Environments', 'Scripts', 'Logos', 'Other'];
+const CATEGORIES = ['All', 'Gameplay', 'UI/UX', 'Environments', 'Scripts', 'Logos'];
 
 export default function ProjectGallery({ items }) {
   const [filter, setFilter] = useState('All');

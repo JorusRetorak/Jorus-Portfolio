@@ -253,8 +253,8 @@ export default function Projects() {
       <div className="px-6 md:px-24 mt-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-6 md:p-8 border border-amber-400/30 rounded-2xl bg-amber-400/5">
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-bold text-white">Have an idea in mind?</h3>
-            <p className="text-slate-400 mt-1">Let's build something extraordinary together.</p>
+            <h3 className="text-xl font-bold text-white">Interested in hiring me?</h3>
+            <p className="text-slate-400 mt-1">Message me!</p>
           </div>
           <a
             href="/contact"
