@@ -215,7 +215,7 @@ end
                     <div className="flex flex-col pt-2 md:text-right px-0 md:px-4 flex-1 text-center md:text-right order-last md:order-first">
                         <h2 className="text-3xl md:text-4xl font-bold text-white md:whitespace-nowrap">Premium UI Design</h2>
                         <p className="mt-4 md:mt-6 text-base md:text-lg text-slate-400">
-                            I craft sleek, modern, and intuitive game interfaces using Affinity Designer. I handle the complete package: from drafting concepts to importing them flawlessly into Studio and ensuring dynamic, responsive scaling so your game looks perfect on every device.
+                            I craft sleek, modern, and intuitive game interfaces using Affinity Designer. I'm able to turn concepts into finalized designs and import them perfectly into Studio, ensuring dynamic, responsive scaling so your game looks perfect on every device.
                         </p>
                     </div>
 
