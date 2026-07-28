@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 flex flex-col md:flex-row justify-between items-center py-5 px-6 md:px-24 text-white gap-4 md:gap-0 w-full transition-all duration-300 ${
+      className={`sticky top-0 z-50 flex flex-col md:flex-row justify-between items-center py-5 px-6 md:px-24 text-white gap-4 w-full transition-all duration-300 relative ${
         scrolled
           ? 'bg-black/60 backdrop-blur-md border-b border-slate-800 shadow-lg shadow-black/20'
           : 'bg-transparent border-b border-transparent'
@@ -36,7 +36,7 @@ export default function Navbar() {
         Jorus
       </motion.div>
 
-      <div className="flex gap-2 md:gap-2 relative">
+      <div className="flex gap-2 relative md:absolute md:left-1/2 md:-translate-x-1/2">
         {links.map((link) => {
           const isActive = location.pathname === link.to;
           return (
@@ -46,13 +46,13 @@ export default function Navbar() {
               whileTap={{ scale: 0.95 }}
               to={link.to}
               className={`relative px-4 py-2 rounded-b-md transition-colors inline-block ${
-                isActive ? 'text-white' : 'text-slate-400 hover:text-white'
+                isActive ? 'text-amber-400' : 'text-slate-400 hover:text-white'
               }`}
             >
               {isActive && (
                 <motion.span
                   layoutId="nav-pill"
-                  className="absolute inset-0 bg-white/10 border border-white/10 rounded-full"
+                  className="absolute inset-0 bg-amber-400/10 border border-amber-400/20 rounded-full"
                   transition={{ type: 'spring', bounce: 0.25, duration: 0.5 }}
                 />
               )}
@@ -61,6 +61,13 @@ export default function Navbar() {
           );
         })}
       </div>
+
+      <Link
+        to="/contact"
+        className="hidden md:flex items-center gap-2 px-5 py-2.5 border border-amber-400/60 rounded-lg text-amber-400 font-bold text-sm hover:bg-amber-400 hover:text-black transition-colors"
+      >
+        Let's Work Together →
+      </Link>
     </nav>
   );
 }

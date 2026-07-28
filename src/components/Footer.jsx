@@ -3,29 +3,47 @@ import { motion } from 'framer-motion';
 
 const MotionLink = motion(Link);
 
+const quickLinks = [
+  { to: '/', label: 'Home' },
+  { to: '/projects', label: 'Projects' },
+  { to: '/contact', label: 'Contact' },
+];
+
 export default function Footer() {
   return (
-    <footer className="flex flex-col md:flex-row justify-between items-center py-8 px-6 md:px-24 bg-slate-900 text-white relative z-50 gap-4 md:gap-0 w-full mt-auto">
-      
-      <motion.div 
-        whileHover={{ opacity: 0.8, rotate: 2, scale: 1.1 }}
-        className="text-xl font-bold cursor-pointer"
-      >
-        Jorus
-      </motion.div>
+    <footer className="border-t border-slate-800 bg-black/60 backdrop-blur-md">
+      <div className="px-6 md:px-24 py-8 flex flex-col md:flex-row md:items-start gap-8 md:gap-24">
+        <div className="max-w-xs">
+          <motion.div
+            whileHover={{ opacity: 0.8, rotate: 2, scale: 1.1 }}
+            className="text-xl font-bold text-white cursor-pointer inline-block"
+          >
+            Jorus
+          </motion.div>
+          <p className="text-sm text-slate-500 mt-2 leading-relaxed">
+            Building your best games.
+          </p>
+        </div>
 
-      <div className="flex gap-6 md:gap-8">
-        <MotionLink whileHover={{ scale: 1.1 }} to="/" className="hover:text-gray-300 transition-colors inline-block">
-          Home
-        </MotionLink>
-        <MotionLink whileHover={{ scale: 1.1 }} to="/projects" className="hover:text-gray-300 transition-colors inline-block">
-          Projects
-        </MotionLink>
-        <MotionLink whileHover={{ scale: 1.1 }} to="/contact" className="hover:text-gray-300 transition-colors inline-block">
-          Contact
-        </MotionLink>
+        <div className="ml-auto">
+          <h3 className="text-xs tracking-[0.2em] text-amber-400 font-bold uppercase mb-3 ">
+            Quick Links
+          </h3>
+          <ul className="flex flex-col gap-2 items-end">
+            {quickLinks.map((link) => (
+              <li key={link.to}>
+                <MotionLink
+                  whileHover={{ x: 3 }}
+                  to={link.to}
+                  className="text-sm text-slate-400 hover:text-white transition-colors inline-block"
+                >
+                  {link.label}
+                </MotionLink>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-
     </footer>
   );
 }

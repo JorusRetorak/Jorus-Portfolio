@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
-import { useMemo } from 'react';
-import Slideshow from '../components/Slideshow';
-import LazyImage from '../components/LazyImage';
-import LazyVideo from '../components/LazyVideo';
+import { useMemo, useState } from 'react';
+import ProjectsHero from '../components/ProjectsHero';
+import FeaturedProject from '../components/FeaturedProject';
+import ProjectTimeline from '../components/ProjectTimeline';
+import ProjectGallery from '../components/ProjectGallery';
+
 import mineriteImg1 from '../assets/mi1.png';
 import mineriteImg2 from '../assets/mi2.png';
 import mineriteImg3 from '../assets/mi3.png';
@@ -73,79 +75,155 @@ import logo3 from '../assets/logo3.png';
 import logo4 from '../assets/logo4.png';
 import logo5 from '../assets/logo5.png';
 
-const projects = [
+const FEATURED_PROJECTS = [
   {
-    id: 1,
-    title: "Minerite - Lead Programmer",
-    description: "A complex, fully finished, voxel-based mining simulator. Caves are generated via perlin noise, multiple cave biomes are scripted as well. Enchants, relics, potions, detailed caves with decorations such as mushrooms, buried structures, and a fully functional UI are featured.",
-    link: "https://www.roblox.com/games/139040116168528/Minerite#!/game-instances",
+    index: '01',
+    title: 'Minerite',
+    year: '2024 — Present',
+    role: 'Lead Programmer',
+    description:
+      'A voxel-based mining simulator with procedural caves, biomes, custom enchantments, relics, potions, buried structures, and a full feature-rich UI.',
+    tags: ['LuaU', 'Procedural Generation', 'UI/UX', 'Optimization', 'Data Systems', 'Networking'],
+    link: 'https://www.roblox.com/games/139040116168528/Minerite#!/game-instances',
+    cover: { type: 'image', src: mineriteImg1 },
     media: [
-      { type: 'video', src: mineriteVid1, note: "Only did UI Programming" },
-      { type: 'video', src: mineriteVid2 },
-      { type: 'video', src: mineriteVid3, note: "Only did UI Programming" },
-      { type: 'video', src: mineriteVid4 },
-      { type: 'video', src: mineriteVid5, note: "Only did UI Programming" },
+      { type: 'video', src: mineriteVid2, poster: mineriteImg1 },
+      { type: 'video', src: mineriteVid1, poster: mineriteImg2 },
       { type: 'image', src: mineriteImg1 },
       { type: 'image', src: mineriteImg2 },
       { type: 'image', src: mineriteImg3 },
-    ]
+    ],
+    stats: [
+      { icon: 'cube', label: 'Systems', value: '20+' },
+      { icon: 'clock', label: 'Dev Time', value: '3+ Months' },
+      { icon: 'eye', label: 'Total Visits', value: '4K+' },
+    ],
   },
   {
-    id: 2,
-    title: "Nextgen Tennis - Lead Programmer",
-    description: "An extensively featured tennis game using progammed projectile motion. All aspects of the sport are coded in, including singles, doubles, multiple sets, varying game sets, etc.",
-    link: "https://www.roblox.com/games/86250988287261/NextGen-Tennis",
+    index: '02',
+    title: 'NextGen Tennis',
+    year: '2024',
+    role: 'Lead Programmer',
+    description:
+      'An extensively featured tennis game using programmed projectile motion — singles, doubles, multiple sets, and varying game formats all coded in.',
+    tags: ['Game Systems', 'UI/UX', 'Projectile Motion'],
+    link: 'https://www.roblox.com/games/86250988287261/NextGen-Tennis',
+    cover: { type: 'video', src: nextgenVid1 },
     media: [
       { type: 'video', src: nextgenVid1 },
       { type: 'video', src: nextgenVid2 },
-      { type: 'video', src: nextgenVid3, note: "Only did UI Programming" }
-    ]
+      { type: 'video', src: nextgenVid3 },
+    ],
+    stats: [
+      { icon: 'cube', label: 'Systems', value: '25+' },
+      { icon: 'clock', label: 'Dev Time', value: '6+ Months' },
+       { icon: 'eye', label: 'Total Visits', value: '55K+' },
+    ],
   },
   {
-    id: 3,
-    title: "Tony's Mansion - Showcase",
-    description: "Tony's Mansion. Most of the structure built by me. Models/furniture not mine.",
+    index: '03',
+    title: "Tony's Mansion",
+    year: '2023',
+    role: 'Builder',
+    description:
+      'A large mansion build showcase. Most of the structure was built by me; models and furniture are not mine.',
+    tags: ['Building', 'Environment Design'],
+    cover: { type: 'image', src: dl1 },
     media: [
       { type: 'image', src: dl1 },
       { type: 'image', src: dl2 },
       { type: 'image', src: dl3 },
-      { type: 'image', src: new4 }
-    ]
+      { type: 'image', src: new4 },
+    ],
+    stats: [
+      { icon: 'cube', label: 'Rooms Built', value: '15+' },
+      { icon: 'clock', label: 'Build Time', value: '5 Days' },
+    ],
   },
 ];
 
 export default function Projects() {
-  const galleryMedia = useMemo(() => [
-    { type: 'video', src: mineriteVid1, note: "Only did UI Programming" },
-    { type: 'video', src: mineriteVid2 }, { type: 'video', src: mineriteVid3, note: "Only did UI Programming" },
-    { type: 'video', src: mineriteVid4 }, { type: 'video', src: mineriteVid5, note: "Only did UI Programming" }, { type: 'video', src: mineriteVid6 },
-    { type: 'video', src: vid5, note: "Custom flight system" }, { type: 'image', src: ui17 },
-    { type: 'image', src: ui1 }, { type: 'image', src: ui2 }, { type: 'image', src: new8 }, { type: 'image', src: ui3 },
-    { type: 'image', src: ui4 }, { type: 'video', src: ui5 }, { type: 'image', src: ui6 },
-    { type: 'image', src: ui7 }, { type: 'image', src: ui8 }, { type: 'image', src: ui9 }, { type: 'video', src: vid4 },
-    { type: 'video', src: new5 }, { type: 'video', src: new6 }, { type: 'image', src: ui19 },
-    { type: 'video', src: script1 },
-    { type: 'video', src: nextgenVid1 }, { type: 'video', src: nextgenVid2 },
-    { type: 'video', src: nextgenVid3, note: "Only did UI Programming" },
-    { type: 'video', src: lonewolfVid1 }, { type: 'video', src: lonewolfVid2 },
-    { type: 'video', src: vid3 },
-    { type: 'image', src: ui10 }, { type: 'image', src: ui11 }, { type: 'image', src: ui12 }, { type: 'image', src: ui16 },
-    { type: 'image', src: ui13 }, { type: 'image', src: ui14 }, { type: 'image', src: ui15 }, { type: 'image', src: ui18 },
-    { type: 'image', src: buildgal1 }, { type: 'image', src: buildgal2 },
-    { type: 'image', src: buildgal3 }, { type: 'image', src: buildgal4 },
-    { type: 'image', src: buildgal5 }, { type: 'image', src: buildgal6 },
-    { type: 'image', src: buildgal7 }, { type: 'image', src: buildgal8 },
-    { type: 'image', src: buildgal9 }, { type: 'image', src: buildgal10 },
-    { type: 'image', src: buildgal11 }, { type: 'image', src: buildgal12 },
-    { type: 'image', src: new1 }, { type: 'image', src: new2 },
-    { type: 'image', src: new3 }, { type: 'image', src: new4 },
-    { type: 'image', src: new7 },
-    { type: 'image', src: logo1 },
-    { type: 'image', src: logo2 },
-    { type: 'image', src: logo3 },
-    { type: 'image', src: logo4 },
-    { type: 'image', src: logo5 },
-  ], []);
+  const [activeFeatured, setActiveFeatured] = useState(0);
+
+  const galleryMedia = useMemo(
+    () => [
+      // Gameplay (Minerite & NextGen)
+      { type: 'image', src: mineriteImg1, category: 'Gameplay' }, // mi1
+      { type: 'image', src: mineriteImg2, category: 'Gameplay' }, // mi2
+      { type: 'image', src: mineriteImg3, category: 'Gameplay' }, // mi3
+      { type: 'video', src: mineriteVid1, category: 'Gameplay', note: 'Only did UI Programming' },
+      { type: 'video', src: mineriteVid2, category: 'Gameplay' }, // mineritev1
+      { type: 'video', src: mineriteVid3, category: 'Gameplay', note: 'Only did UI Programming' }, // mineritev2
+      { type: 'video', src: mineriteVid4, category: 'Gameplay' }, // mineritev3
+      { type: 'video', src: mineriteVid5, category: 'Gameplay', note: 'Only did UI Programming' }, // mineritev4
+      { type: 'video', src: nextgenVid1, category: 'Gameplay' },
+      { type: 'video', src: nextgenVid2, category: 'Gameplay' },
+      { type: 'video', src: nextgenVid3, category: 'Gameplay', note: 'Only did UI Programming' },
+
+      // Scripts
+      { type: 'video', src: vid4, category: 'Scripts' }, // mv1
+      { type: 'video', src: mineriteVid6, category: 'Scripts' }, // mv2
+      { type: 'video', src: new5, category: 'Scripts' },
+      { type: 'video', src: new6, category: 'Scripts' },
+      { type: 'video', src: vid5, category: 'Scripts', note: 'Custom flight system' }, // plane1
+      { type: 'video', src: lonewolfVid1, category: 'Scripts' }, // v1
+      { type: 'video', src: lonewolfVid2, category: 'Scripts' }, // v2
+      { type: 'video', src: vid3, category: 'Scripts' }, // v3
+      { type: 'video', src: script1, category: 'Scripts' },
+
+      // UI/UX
+      { type: 'image', src: ui1, category: 'UI/UX' },
+      { type: 'image', src: ui2, category: 'UI/UX' },
+      { type: 'image', src: ui3, category: 'UI/UX' },
+      { type: 'image', src: ui4, category: 'UI/UX' },
+      { type: 'video', src: ui5, category: 'UI/UX' },
+      { type: 'image', src: ui6, category: 'UI/UX' },
+      { type: 'image', src: ui7, category: 'UI/UX' },
+      { type: 'image', src: ui8, category: 'UI/UX' },
+      { type: 'image', src: ui9, category: 'UI/UX' },
+      { type: 'image', src: ui10, category: 'UI/UX' },
+      { type: 'image', src: ui11, category: 'UI/UX' },
+      { type: 'image', src: ui12, category: 'UI/UX' },
+      { type: 'image', src: ui13, category: 'UI/UX' },
+      { type: 'image', src: ui14, category: 'UI/UX' },
+      { type: 'image', src: ui15, category: 'UI/UX' },
+      { type: 'image', src: ui16, category: 'UI/UX' },
+      { type: 'image', src: ui17, category: 'UI/UX' },
+      { type: 'image', src: ui18, category: 'UI/UX' },
+      { type: 'image', src: ui19, category: 'UI/UX' },
+      { type: 'image', src: new2, category: 'UI/UX' },
+      { type: 'image', src: new4, category: 'UI/UX' },
+      { type: 'image', src: new7, category: 'UI/UX' },
+      { type: 'image', src: new8, category: 'UI/UX' },
+
+      // Environments
+      { type: 'image', src: buildgal1, category: 'Environments' },
+      { type: 'image', src: buildgal2, category: 'Environments' },
+      { type: 'image', src: buildgal3, category: 'Environments' },
+      { type: 'image', src: buildgal4, category: 'Environments' },
+      { type: 'image', src: buildgal5, category: 'Environments' },
+      { type: 'image', src: buildgal6, category: 'Environments' },
+      { type: 'image', src: buildgal7, category: 'Environments' },
+      { type: 'image', src: buildgal8, category: 'Environments' },
+      { type: 'image', src: buildgal9, category: 'Environments' },
+      { type: 'image', src: buildgal10, category: 'Environments' },
+      { type: 'image', src: buildgal11, category: 'Environments' },
+      { type: 'image', src: buildgal12, category: 'Environments' },
+      { type: 'image', src: dl1, category: 'Environments' },
+      { type: 'image', src: dl2, category: 'Environments' },
+      { type: 'image', src: dl3, category: 'Environments' },
+      { type: 'image', src: new3, category: 'Environments' },
+
+      // Logos
+      { type: 'image', src: logo1, category: 'Logos' },
+      { type: 'image', src: logo2, category: 'Logos' },
+      { type: 'image', src: logo3, category: 'Logos' },
+      { type: 'image', src: logo4, category: 'Logos' },
+      { type: 'image', src: logo5, category: 'Logos' },
+      { type: 'image', src: new1, category: 'Logos' },
+    ],
+    []
+  );
 
   return (
     <motion.div
@@ -153,105 +231,37 @@ export default function Projects() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.25 }}
-      className="w-full px-6 md:px-24 pb-24"
+      className="w-full pb-24"
     >
-      <h1 className="text-5xl font-bold mb-12 md:mb-20 text-white relative group w-fit cursor-default mx-auto md:mx-0 text-center md:text-left mt-8 md:mt-0">
-        Featured Work
-        <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-white to-white transition-all duration-300 group-hover:w-full rounded-full"></span>
-      </h1>
+      <ProjectsHero />
 
-      <div className="flex flex-col gap-24 md:gap-32">
-        {projects.map((project, i) => (
-          <motion.div
-            key={project.id}
-            initial={{ opacity: 0, y: 100 }}
-            whileHover={{ y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ type: "spring", bounce: 0.4, duration: 1 }}
-            className={`flex flex-col md:flex-row gap-8 md:gap-10 w-full xl:w-[85%] md:p-8 ${i % 2 === 0 ? 'mr-auto justify-start' : 'ml-auto justify-end'
-              } items-start`}
+      <FeaturedProject project={FEATURED_PROJECTS[activeFeatured]} />
+
+      <ProjectTimeline
+        items={FEATURED_PROJECTS.map((p) => ({
+          index: p.index,
+          title: p.title,
+          year: p.year,
+          cover: p.cover,
+        }))}
+        activeIndex={activeFeatured}
+        onSelect={setActiveFeatured}
+      />
+
+      <ProjectGallery items={galleryMedia} />
+
+      <div className="px-6 md:px-24 mt-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 p-6 md:p-8 border border-amber-400/30 rounded-2xl bg-amber-400/5">
+          <div className="text-center md:text-left">
+            <h3 className="text-xl font-bold text-white">Have an idea in mind?</h3>
+            <p className="text-slate-400 mt-1">Let's build something extraordinary together.</p>
+          </div>
+          <a
+            href="/contact"
+            className="shrink-0 px-6 py-3 bg-amber-400 hover:bg-amber-300 text-black font-bold rounded-full transition-colors"
           >
-            {i % 2 === 0 ? (
-              <>
-                <Slideshow media={project.media} className="relative group bg-slate-800 rounded-xl" />
-                <div className="flex flex-col pt-2 px-0 md:px-4 w-full md:w-1/2 text-center md:text-left items-center md:items-start">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white">{project.title}</h2>
-                  <p className="mt-4 md:mt-6 text-base md:text-lg text-slate-400">{project.description}</p>
-
-                  {project.link && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-6 text-indigo-400 hover:text-indigo-300 font-semibold underline w-fit transition-colors"
-                    >
-                      View Game ↗
-                    </a>
-                  )}
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="flex flex-col pt-2 w-full md:w-1/2 items-center md:items-end text-center md:text-right order-last md:order-first px-0 md:px-4">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white">{project.title}</h2>
-                  <p className="mt-4 md:mt-6 text-base md:text-lg text-slate-400">{project.description}</p>
-
-                  {project.link && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-6 text-indigo-400 hover:text-indigo-300 font-semibold underline w-fit transition-colors"
-                    >
-                      View Game ↗
-                    </a>
-                  )}
-                </div>
-                <Slideshow media={project.media} className="relative group bg-slate-800 rounded-xl order-first md:order-last" />
-              </>
-            )}
-          </motion.div>
-        ))}
-      </div>
-
-      <div className="mt-20">
-        <div className="flex flex-col items-center md:items-start text-center md:text-left mb-12">
-          <h2 className="text-4xl font-bold text-white relative group w-fit cursor-default mb-6">
-            Gallery/ Concepts
-            <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-white to-white transition-all duration-300 group-hover:w-full rounded-full"></span>
-          </h2>
-          <p className="text-slate-400 max-w-3xl text-lg">
-            A collection of my random UI designs, script showcases, etc.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryMedia.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              whileHover={{ y: -5, scale: 1.02 }}
-              transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
-              className="relative aspect-video bg-transparent rounded-xl overflow-hidden group"
-            >
-              {item.type === 'image' ? (
-                <LazyImage src={item.src} alt="Gallery item" className="w-full h-full object-contain" />
-              ) : (
-                <LazyVideo src={item.src} className="w-full h-full object-contain" />
-              )}
-
-              {item.note && (
-                <div className="absolute bottom-0 left-0 right-0 p-3 bg-black/70 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-[10px] md:text-xs text-white text-center italic">
-                    * {item.note}
-                  </p>
-                </div>
-              )}
-            </motion.div>
-          ))}
+            Let's Talk →
+          </a>
         </div>
       </div>
     </motion.div>

@@ -6,6 +6,10 @@ import StatsBar from '../components/StatsBar';
 import AvailabilityBadge from '../components/AvailabilityBadge';
 import Codeblock from '../components/Codeblock';
 import Slideshow from '../components/Slideshow';
+import SkillsGrid from '../components/SkillsGrid';
+import FeaturedProjects from '../components/FeaturedProjects';
+import UISection from '../components/UISection';
+import cavePhoto from '../assets/cavePhoto.png';
 import ui1 from '../assets/ui1.jpeg';
 import ui2 from '../assets/ui2.png';
 import ui3 from '../assets/ui3.jpeg';
@@ -31,6 +35,8 @@ import new4 from '../assets/new4.png';
 import new7 from '../assets/new7.png';
 import new8 from '../assets/new8.png';
 
+// import mineriteImg1 from '../assets/mi1.png';
+import dl1 from '../assets/dl1.jpeg';
 
 export default function Home() {
 
@@ -80,6 +86,32 @@ export default function Home() {
     const media2 = useMemo(() => [
         { type: 'video', src: mineriteVid1 },
         { type: 'video', src: nextgenVid1 },
+    ], []);
+
+    const featured = useMemo(() => [
+        {
+            title: 'Minerite',
+            kicker: 'Mining Game',
+            description: 'A fully finished, voxel-based mining simulator with procedural caves, ores, enchants, and a complete UI.',
+            link: 'https://www.roblox.com/games/139040116168528/Minerite#!/game-instances',
+            tags: ['Lua', 'Procedural Gen', 'UI Design'],
+            cover: { type: 'video', src: mineriteVid1 },
+        },
+        {
+            title: 'NextGen Tennis',
+            kicker: 'Sports Game',
+            description: 'An extensively featured tennis game with programmed projectile motion, singles, doubles, and full match logic.',
+            link: 'https://www.roblox.com/games/86250988287261/NextGen-Tennis',
+            tags: ['Game Systems', 'UI/UX'],
+            cover: { type: 'video', src: nextgenVid1 },
+        },
+        {
+            title: "Tony's Mansion",
+            kicker: 'Showcase',
+            description: 'A large-scale build showcase — most of the structure built by me, with third-party models and furniture.',
+            tags: ['Building', 'Environment'],
+            cover: { type: 'image', src: dl1 },
+        },
     ], []);
 
     const backgroundCode = `
@@ -167,23 +199,83 @@ end
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
         >
-            <Spotlight className="flex flex-col items-center px-6 md:px-24">
-                <AvailabilityBadge />
-                <h1 className="text-4xl md:text-5xl font-bold mt-6 mb-6 md:mb-10 text-white relative group w-fit cursor-default text-center">
-                    Programmer, UI Designer, Builder.
-                    <span className="absolute -bottom-2 left-0 w-0 h-1 bg-gradient-to-r from-white to-white transition-all duration-300 group-hover:w-full rounded-full"></span>
-                </h1>
-                <p className="text-base md:text-lg text-slate-300 max-w-2xl text-center px-4">
-                    I am a Luau programmer and game UI Designer looking to make your projects great! I am determined, collaborative, and communicative!
-                    I require clients to be communicative and respectful, so that goals and deadlines can be achieved in an appropriate manner.
-                    I have ~6 years of experience as a Roblox developer and have worked on numerous projects.
-                    I specialize in data systems and UI programming.
-                    I prefer UI Design & programming jobs.
-                </p>
-                <StatsBar />
+            {/* ---------------- HERO ---------------- */}
+            <Spotlight className="flex flex-col lg:flex-row items-center gap-12 px-6 md:px-24 py-10 md:py-16">
+
+                <div className="hidden lg:flex flex-col items-center gap-8 absolute left-6 top-1/2 -translate-y-1/2 text-slate-600">
+                    <span className="text-xs font-bold text-amber-400">01</span>
+                    <span className="w-px h-16 bg-slate-700" />
+                    <div className="flex flex-col gap-5">
+                        <a href="https://devforum.roblox.com/u/jorusretorak/summary" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">◆</a>
+                        <a href="https://discord.com/users/344941451689328640" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">✉</a>
+                    </div>
+                </div>
+
+                <div className="flex flex-col items-center lg:items-start text-center lg:text-left w-full lg:w-1/2">
+                    <AvailabilityBadge />
+                    <span className="mt-6 text-amber-400 text-xs tracking-[0.3em] font-bold uppercase">Roblox Developer</span>
+                    <h1 className="text-4xl md:text-6xl font-bold mt-4 mb-6 text-white leading-tight">
+                        I BUILD <br />
+                        <span className="text-amber-400">EXPERIENCES.</span>
+                    </h1>
+                    <p className="text-base md:text-lg text-slate-300 max-w-lg">
+                        I create immersive Roblox games, clean UI/UX, and optimized systems that bring
+                        creative ideas to life. I have ~6 years of experience as a Roblox developer, specializing
+                        in data systems and UI programming.
+                    </p>
+
+                    <div className="flex gap-4 mt-8">
+                        <a
+                            href="/projects"
+                            className="px-6 py-3 bg-amber-400 hover:bg-amber-300 text-black font-bold rounded-lg transition-colors"
+                        >
+                            View My Work →
+                        </a>
+                        <a
+                            href="/contact"
+                            className="px-6 py-3 border border-slate-700 hover:border-amber-400 hover:text-amber-400 text-white font-bold rounded-lg transition-colors"
+                        >
+                            Contact Me →
+                        </a>
+                    </div>
+
+                    <StatsBar />
+                </div>
+
+                <div className="relative w-full lg:w-1/2 flex items-center justify-center pointer-events-none min-h-[400px] lg:min-h-0">
+                    <motion.div
+                        animate={{ y: [-8, 8, -8] }}
+                        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] lg:w-[85vw] h-[80vh] lg:h-[130vh] flex items-center justify-center -z-10"
+                        style={{
+                            WebkitMaskImage: 'radial-gradient(ellipse closest-side, black 30%, transparent 90%)',
+                            maskImage: 'radial-gradient(ellipse closest-side, black 30%, transparent 90%)'
+                        }}
+                    >
+                        <div className="absolute w-[60%] h-[60%] rounded-full bg-amber-500/10 blur-[150px]" />
+
+                        <div className="absolute w-[20rem] h-[20rem] md:w-[45rem] md:h-[45rem] rounded-full border-[2px] border-amber-400/20 blur-[2px]" />
+                        <div className="absolute w-[20rem] h-[20rem] md:w-[45rem] md:h-[45rem] rounded-full border border-amber-300/10" />
+
+                        <img
+                            src={cavePhoto}
+                            alt="Minerite Cave Showcase"
+                            className="relative z-10 w-full h-full object-cover object-[70%_center] scale-[1] opacity-85"
+                        />
+                    </motion.div>
+                </div>
             </Spotlight>
 
             <TechMarquee />
+
+            {/* ---------------- SKILLS ---------------- */}
+            <SkillsGrid />
+
+            {/* ---------------- FEATURED PROJECTS ---------------- */}
+            <FeaturedProjects projects={featured} />
+
+            {/* ---------------- UI DESIGN ---------------- */}
+            <UISection media={media} />
 
             <div className="flex flex-col gap-24 md:gap-32 px-6 md:px-24 py-16 md:py-24">
 
@@ -213,24 +305,6 @@ end
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ type: "spring", bounce: 0.4, duration: 1 }}
-                    className="flex flex-col md:flex-row gap-8 md:gap-10 w-full xl:w-[72%] ml-auto p-4 md:p-8 items-start bg-transparent rounded-2xl"
-                >
-                    <div className="flex flex-col pt-2 md:text-right px-0 md:px-4 flex-1 text-center md:text-right order-last md:order-first">
-                        <h2 className="text-3xl md:text-4xl font-bold text-white md:whitespace-nowrap">Premium UI Design</h2>
-                        <p className="mt-4 md:mt-6 text-base md:text-lg text-slate-400">
-                            I craft sleek, modern, and intuitive game interfaces using Affinity Designer. I'm able to turn concepts into finalized designs and import them perfectly into Studio, ensuring dynamic, responsive scaling so your game looks perfect on every device.
-                        </p>
-                    </div>
-
-                    <Slideshow media={media} className="order-first md:order-last" />
-                </motion.div>
-
-                <motion.div
-                    initial={{ opacity: 0, y: 100 }}
-                    whileHover={{ y: -10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ type: "spring", bounce: 0.4, duration: 1 }}
                     className="flex flex-col md:flex-row gap-8 md:gap-10 w-full xl:w-[70%] mr-auto p-4 md:p-8 items-start bg-transparent rounded-2xl"
                 >
                     <Slideshow media={media2} className="" />
@@ -245,6 +319,10 @@ end
 
             </div>
 
+            {/* ---------------- ABOUT ME ---------------- */}
+            {/* <AboutSection /> */}
+
+            {/* ---------------- CTA ---------------- */}
             <div className="relative w-full py-24 md:py-40 flex items-center justify-center overflow-hidden">
 
                 <div
@@ -255,7 +333,7 @@ end
                         initial={{ opacity: 0, y: 100 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ type: "spring", bounce: 0.4, duration: 1.5 }}
-                        className="font-mono text-xs sm:text-sm md:text-base text-indigo-300 w-full h-full p-4 md:p-8 whitespace-pre-wrap overflow-hidden leading-relaxed"
+                        className="font-mono text-xs sm:text-sm md:text-base text-amber-300/80 w-full h-full p-4 md:p-8 whitespace-pre-wrap overflow-hidden leading-relaxed"
                     >
                         {backgroundCode}
                     </motion.pre>
@@ -274,7 +352,7 @@ end
                     </p>
                     <a
                         href="/contact"
-                        className="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-slate-200 hover:scale-105 transition-all duration-300 pointer-events-auto shadow-[0_0_20px_rgba(255,255,255,0.3)]"
+                        className="px-8 py-4 bg-amber-400 text-black font-bold rounded-full hover:bg-amber-300 hover:scale-105 transition-all duration-300 pointer-events-auto shadow-[0_0_20px_rgba(251,191,36,0.35)]"
                     >
                         Let's Work Together
                     </a>

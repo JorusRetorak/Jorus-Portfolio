@@ -16,7 +16,7 @@
     "postcss": "^8.5.19",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "react-router-dom": "^7.18.1",
+    "react-router-dom": "^7.11.0",
     "react-syntax-highlighter": "^16.1.1",
     "tailwindcss": "^4.3.2"
   },
@@ -32,6 +32,9 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.3",
     "globals": "^17.7.0",
-    "vite": "^8.1.1"
+    "sharp": "^0.35.3",
+    "svgo": "^4.0.2",
+    "vite": "^8.1.1",
+    "vite-plugin-image-optimizer": "^2.0.3"
   }
 }

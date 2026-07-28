@@ -54,8 +54,10 @@ export default function Slideshow({ media, className = "" }) {
               className="block h-full w-auto object-contain"
             />
           ) : (
-            <LazyVideo 
+            <LazyVideo
               src={current.src}
+              poster={current.poster}
+              preload="metadata"
               className="block h-full w-auto object-contain"
             />
           )}
