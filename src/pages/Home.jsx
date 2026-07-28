@@ -202,15 +202,6 @@ end
             {/* ---------------- HERO ---------------- */}
             <Spotlight className="flex flex-col lg:flex-row items-center gap-12 px-6 md:px-24 py-10 md:py-16">
 
-                <div className="hidden lg:flex flex-col items-center gap-8 absolute left-6 top-1/2 -translate-y-1/2 text-slate-600">
-                    <span className="text-xs font-bold text-amber-400">01</span>
-                    <span className="w-px h-16 bg-slate-700" />
-                    <div className="flex flex-col gap-5">
-                        <a href="https://devforum.roblox.com/u/jorusretorak/summary" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">◆</a>
-                        <a href="https://discord.com/users/344941451689328640" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">✉</a>
-                    </div>
-                </div>
-
                 <div className="flex flex-col items-center lg:items-start text-center lg:text-left w-full lg:w-1/2">
                     <AvailabilityBadge />
                     <span className="mt-6 text-amber-400 text-xs tracking-[0.3em] font-bold uppercase">Roblox Developer</span>
@@ -276,6 +267,10 @@ end
 
             {/* ---------------- UI DESIGN ---------------- */}
             <UISection media={media} />
+            <div className="flex px-24 items-center gap-4">
+                <span className="w-6 h-px bg-amber-400" />
+                <h2 className="text-sm tracking-[0.2em] text-amber-400 font-bold uppercase">More About Me</h2>
+            </div>
 
             <div className="flex flex-col gap-24 md:gap-32 px-6 md:px-24 py-16 md:py-24">
 
@@ -323,6 +318,7 @@ end
             {/* <AboutSection /> */}
 
             {/* ---------------- CTA ---------------- */}
+
             <div className="relative w-full py-24 md:py-40 flex items-center justify-center overflow-hidden">
 
                 <div
