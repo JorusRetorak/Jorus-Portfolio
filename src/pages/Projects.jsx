@@ -43,6 +43,8 @@ import ui15 from '../assets/ui15.jpg';
 import ui16 from '../assets/uinew1.png';
 import script1 from '../assets/script1.mp4';
 import ui17 from '../assets/uinew2.png';
+import ui18 from '../assets/uinew3.png';
+import ui19 from '../assets/uinew4.png';
 import buildgal1 from '../assets/buildgal1.jpeg';
 import buildgal2 from '../assets/buildgal2.jpeg';
 import buildgal3 from '../assets/buildgal3.jpeg';
@@ -115,14 +117,14 @@ export default function Projects() {
     { type: 'image', src: ui1 }, { type: 'image', src: ui2 }, { type: 'image', src: new8 }, { type: 'image', src: ui3 },
     { type: 'image', src: ui4 }, { type: 'video', src: ui5 }, { type: 'image', src: ui6 },
     { type: 'image', src: ui7 }, { type: 'image', src: ui8 }, { type: 'image', src: ui9 }, { type: 'video', src: vid4 },
-    { type: 'video', src: new5 }, { type: 'video', src: new6 },
+    { type: 'video', src: new5 }, { type: 'video', src: new6 }, { type: 'image', src: ui19 },
     { type: 'video', src: script1 },
     { type: 'video', src: nextgenVid1 }, { type: 'video', src: nextgenVid2 },
     { type: 'video', src: nextgenVid3, note: "Only did UI Programming" },
     { type: 'video', src: lonewolfVid1 }, { type: 'video', src: lonewolfVid2 },
     { type: 'video', src: vid3 },
     { type: 'image', src: ui10 }, { type: 'image', src: ui11 }, { type: 'image', src: ui12 },{ type: 'image', src: ui16 },
-    { type: 'image', src: ui13 }, { type: 'image', src: ui14 }, { type: 'image', src: ui15 },
+    { type: 'image', src: ui13 }, { type: 'image', src: ui14 }, { type: 'image', src: ui15 },{ type: 'image', src: ui18 },
     { type: 'image', src: buildgal1 }, { type: 'image', src: buildgal2 },
     { type: 'image', src: buildgal3 }, { type: 'image', src: buildgal4 },
     { type: 'image', src: buildgal5 }, { type: 'image', src: buildgal6 },
