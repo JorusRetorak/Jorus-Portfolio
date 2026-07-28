@@ -31,6 +31,7 @@ import new4 from '../assets/new4.png';
 import new7 from '../assets/new7.png';
 import new8 from '../assets/new8.png';
 
+
 export default function Home() {
 
     const code = `

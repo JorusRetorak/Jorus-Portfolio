@@ -67,6 +67,12 @@ import new6 from '../assets/new6.mp4';
 import new7 from '../assets/new7.png';
 import new8 from '../assets/new8.png';
 
+import logo1 from '../assets/logo1.png';
+import logo2 from '../assets/logo2.png';
+import logo3 from '../assets/logo3.png';
+import logo4 from '../assets/logo4.png';
+import logo5 from '../assets/logo5.png';
+
 const projects = [
   {
     id: 1,
@@ -123,8 +129,8 @@ export default function Projects() {
     { type: 'video', src: nextgenVid3, note: "Only did UI Programming" },
     { type: 'video', src: lonewolfVid1 }, { type: 'video', src: lonewolfVid2 },
     { type: 'video', src: vid3 },
-    { type: 'image', src: ui10 }, { type: 'image', src: ui11 }, { type: 'image', src: ui12 },{ type: 'image', src: ui16 },
-    { type: 'image', src: ui13 }, { type: 'image', src: ui14 }, { type: 'image', src: ui15 },{ type: 'image', src: ui18 },
+    { type: 'image', src: ui10 }, { type: 'image', src: ui11 }, { type: 'image', src: ui12 }, { type: 'image', src: ui16 },
+    { type: 'image', src: ui13 }, { type: 'image', src: ui14 }, { type: 'image', src: ui15 }, { type: 'image', src: ui18 },
     { type: 'image', src: buildgal1 }, { type: 'image', src: buildgal2 },
     { type: 'image', src: buildgal3 }, { type: 'image', src: buildgal4 },
     { type: 'image', src: buildgal5 }, { type: 'image', src: buildgal6 },
@@ -133,7 +139,12 @@ export default function Projects() {
     { type: 'image', src: buildgal11 }, { type: 'image', src: buildgal12 },
     { type: 'image', src: new1 }, { type: 'image', src: new2 },
     { type: 'image', src: new3 }, { type: 'image', src: new4 },
-    { type: 'image', src: new7 }
+    { type: 'image', src: new7 },
+    { type: 'image', src: logo1 },
+    { type: 'image', src: logo2 },
+    { type: 'image', src: logo3 },
+    { type: 'image', src: logo4 },
+    { type: 'image', src: logo5 },
   ], []);
 
   return (
