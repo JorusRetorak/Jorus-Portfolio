@@ -161,16 +161,16 @@ export default function Projects() {
       { type: 'video', src: nextgenVid3, category: 'Gameplay', note: 'Only did UI Programming' },
 
       // Scripts
-      { type: 'video', src: vid4, category: 'Scripts' }, // mv1
-      { type: 'video', src: mineriteVid6, category: 'Scripts' }, // mv2
-      { type: 'video', src: new5, category: 'Scripts' },
-      { type: 'video', src: gridVid1, category: 'Scripts' },
-      { type: 'video', src: new6, category: 'Scripts' },
-      { type: 'video', src: vid5, category: 'Scripts', note: 'Custom flight system' }, // plane1
-      { type: 'video', src: lonewolfVid1, category: 'Scripts' }, // v1
-      { type: 'video', src: lonewolfVid2, category: 'Scripts' }, // v2
-      { type: 'video', src: vid3, category: 'Scripts' }, // v3
-      { type: 'video', src: script1, category: 'Scripts' },
+      { type: 'video', src: vid4, category: 'Extra Scripts' }, // mv1
+      { type: 'video', src: mineriteVid6, category: 'Extra Scripts' }, // mv2
+      { type: 'video', src: new5, category: 'Extra Scripts' },
+      { type: 'video', src: gridVid1, category: 'Extra Scripts' },
+      { type: 'video', src: new6, category: 'Extra Scripts' },
+      { type: 'video', src: vid5, category: 'Extra Scripts', note: 'Custom flight system' }, // plane1
+      { type: 'video', src: lonewolfVid1, category: 'Extra Scripts' }, // v1
+      { type: 'video', src: lonewolfVid2, category: 'Extra Scripts' }, // v2
+      { type: 'video', src: vid3, category: 'Extra Scripts' }, // v3
+      { type: 'video', src: script1, category: 'Extra Scripts' },
 
       // UI/UX
       { type: 'image', src: ui1, category: 'UI/UX' },
