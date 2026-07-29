@@ -117,7 +117,7 @@ const FEATURED_PROJECTS = [
     stats: [
       { icon: 'cube', label: 'Systems', value: '25+' },
       { icon: 'clock', label: 'Dev Time', value: '6+ Months' },
-       { icon: 'eye', label: 'Total Visits', value: '55K+' },
+      { icon: 'eye', label: 'Total Visits', value: '55K+' },
     ],
   },
   {
@@ -186,12 +186,10 @@ export default function Projects() {
       { type: 'image', src: ui11, category: 'UI/UX' },
       { type: 'image', src: ui12, category: 'UI/UX' },
       { type: 'image', src: ui13, category: 'UI/UX' },
-      { type: 'image', src: ui14, category: 'UI/UX' },
       { type: 'image', src: ui15, category: 'UI/UX' },
       { type: 'image', src: ui16, category: 'UI/UX' },
       { type: 'image', src: ui17, category: 'UI/UX' },
       { type: 'image', src: ui18, category: 'UI/UX' },
-      { type: 'image', src: ui19, category: 'UI/UX' },
       { type: 'image', src: new2, category: 'UI/UX' },
       { type: 'image', src: new4, category: 'UI/UX' },
       { type: 'image', src: new7, category: 'UI/UX' },
@@ -221,7 +219,9 @@ export default function Projects() {
       { type: 'image', src: logo3, category: 'Logos' },
       { type: 'image', src: logo4, category: 'Logos' },
       { type: 'image', src: logo5, category: 'Logos' },
+      { type: 'image', src: ui19, category: 'Logos' },
       { type: 'image', src: new1, category: 'Logos' },
+      { type: 'image', src: ui14, category: 'Logos' },
     ],
     []
   );
