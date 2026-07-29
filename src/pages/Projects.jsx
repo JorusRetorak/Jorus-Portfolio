@@ -59,7 +59,7 @@ import buildgal9 from '../assets/buildgal9.png';
 import buildgal10 from '../assets/buildgal10.png';
 import buildgal11 from '../assets/buildgal11.png';
 import buildgal12 from '../assets/buildgal12.png';
-import gridVid1 from '../assets/gridVid.mp4';
+import gridVid from '../assets/gridVid.mp4';
 import new1 from '../assets/new1.png';
 import new2 from '../assets/new2.png';
 import new3 from '../assets/new3.png';
@@ -164,7 +164,7 @@ export default function Projects() {
       { type: 'video', src: vid4, category: 'Extra Scripts' }, // mv1
       { type: 'video', src: mineriteVid6, category: 'Extra Scripts' }, // mv2
       { type: 'video', src: new5, category: 'Extra Scripts' },
-      { type: 'video', src: gridVid1, category: 'Extra Scripts' },
+      { type: 'video', src: gridVid, category: 'Extra Scripts' },
       { type: 'video', src: new6, category: 'Extra Scripts' },
       { type: 'video', src: vid5, category: 'Extra Scripts', note: 'Custom flight system' }, // plane1
       { type: 'video', src: lonewolfVid1, category: 'Extra Scripts' }, // v1
