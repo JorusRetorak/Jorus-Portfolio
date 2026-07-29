@@ -59,7 +59,7 @@ import buildgal9 from '../assets/buildgal9.png';
 import buildgal10 from '../assets/buildgal10.png';
 import buildgal11 from '../assets/buildgal11.png';
 import buildgal12 from '../assets/buildgal12.png';
-import gridVid from '../assets/gridVid1.mp4';
+import gridVid from '../assets/gridvid1.mp4';
 import new1 from '../assets/new1.png';
 import new2 from '../assets/new2.png';
 import new3 from '../assets/new3.png';
