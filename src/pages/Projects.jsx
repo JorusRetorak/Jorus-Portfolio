@@ -9,6 +9,7 @@ import mineriteImg1 from '../assets/mi1.png';
 import mineriteImg2 from '../assets/mi2.png';
 import mineriteImg3 from '../assets/mi3.png';
 import horrorui1 from '../assets/horrorui1.png';
+import tennisui1 from '../assets/tennisui1.png';
 import mineriteVid1 from '../assets/mineritevideo1.mp4';
 import mineriteVid2 from '../assets/mineritev1.mp4';
 import mineriteVid3 from '../assets/mineritev2.mp4';
@@ -174,6 +175,7 @@ export default function Projects() {
 
       // UI/UX
       { type: 'image', src: horrorui1, category: 'UI/UX' },
+      { type: 'image', src: tennisui1, category: 'UI/UX' },
       { type: 'image', src: ui1, category: 'UI/UX' },
       { type: 'image', src: ui2, category: 'UI/UX' },
       { type: 'image', src: ui3, category: 'UI/UX' },
