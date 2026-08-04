@@ -34,6 +34,8 @@ import new2 from '../assets/new2.png';
 import new4 from '../assets/new4.png';
 import new7 from '../assets/new7.png';
 import new8 from '../assets/new8.png';
+import vampireui1 from '../assets/vampireui1.png';
+import vampireui2 from '../assets/vampireui2.png';
 
 // import mineriteImg1 from '../assets/mi1.png';
 import dl1 from '../assets/dl1.jpeg';
@@ -60,6 +62,8 @@ export default function Home() {
     `;
 
     const media = useMemo(() => [
+        { type: 'image', src: vampireui1 },
+        { type: 'image', src: vampireui2 },
         { type: 'image', src: ui1 },
         { type: 'image', src: ui2 },
         { type: 'image', src: ui6 },
