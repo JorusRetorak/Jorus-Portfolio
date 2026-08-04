@@ -77,6 +77,7 @@ import logo4 from '../assets/logo4.png';
 import logo5 from '../assets/logo5.png';
 import vampireui1 from '../assets/vampireui1.png';
 import vampireui2 from '../assets/vampireui2.png';
+import vampireui3 from '../assets/vampireui3.png';
 
 const FEATURED_PROJECTS = [
   {
@@ -177,6 +178,7 @@ export default function Projects() {
 
       // UI/UX
       { type: 'image', src: horrorui1, category: 'UI/UX' },
+      { type: 'image', src: vampireui3, category: 'UI/UX' },
       { type: 'image', src: vampireui1, category: 'UI/UX' },
       { type: 'image', src: vampireui2, category: 'UI/UX' },
       { type: 'image', src: tennisui1, category: 'UI/UX' },
