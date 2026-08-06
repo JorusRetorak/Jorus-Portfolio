@@ -1,7 +1,7 @@
 const stats = [
   { value: '6+', label: 'Years Experience' },
   { value: '3', label: 'Shipped Games' }, 
-  { value: '151K', label: 'Visits' },
+  { value: '160K', label: 'Visits' },
 ];
 
 export default function StatsBar() {
